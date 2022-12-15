@@ -31,6 +31,9 @@ module.exports = {
       width: {
         container: "1180px",
       },
+      boxShadow: {
+        navbar: "0px 5px 25px rgba(130, 145, 159, 0.2)",
+      },
     },
   },
   plugins: [],

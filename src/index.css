@@ -27,3 +27,7 @@ html {
   mask-image: url(./assets/icons/planet.svg);
   -webkit-mask-image: url(./assets/icons/planet.svg);
 }
+
+body {
+  height: 1000px;
+}
