@@ -2,7 +2,36 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        purple: "#7872B9",
+        "purple-light": "#9691D2",
+        pale: "#D7C3E6",
+        "pale-light": "#F1E6F7",
+        aqua: "#EBF5FF",
+        "aqua-dark": "#CDE1FF",
+        "aqua-light": "#F9FCFF",
+        pink: "#FA788C",
+        "pink-light": "#FAAAB4",
+        orange: "#FACD6E",
+        charcoal: "#4D4D52",
+      },
+      fontSize: {
+        44: "44px",
+        40: "40px",
+        24: "24px",
+        20: "20px",
+        18: "18px",
+        16: "16px",
+      },
+      borderRadius: {
+        15: "15px",
+        10: "10px",
+      },
+      width: {
+        container: "1180px",
+      },
+    },
   },
   plugins: [],
 };
