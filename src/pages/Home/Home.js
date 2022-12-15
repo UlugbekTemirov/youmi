@@ -15,7 +15,9 @@ const Home = () => {
     <div onScroll={getTop}>
       <Section img={homeSection}>
         <h1 className="text-44 text-purple font-bold">Вместе мы справимся</h1>
-        <p>Найдите своего психолога онлайн</p>
+        <p className="text-40 font-semibold text-charcoal w-[420px] leading-[140%]">
+          Найдите своего психолога онлайн
+        </p>
         <Button>Найти психолога</Button>
         <p>2770 руб. за 50 минут сессии</p>
       </Section>

@@ -2,28 +2,26 @@ import { useState } from "react";
 
 const Button = ({ children, width }) => {
   const [hover, setHover] = useState(false);
-  const [focus, setFocus] = useState(false);
+  const [active, setActive] = useState(false);
 
   return (
-    <button
-      className={`bg-purple text-20 btn text-white rounded-15 text-center py-[25px] mt-2 font-bold leading-5 relative ${
-        width ?? "w-[380px]"
-      }`}
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-      onMouseDown={() => setFocus(true)}
-      onMouseUp={() => setFocus(false)}
-      type="button"
-    >
-      {children}
+    <div className={`${width ?? "w-[380px]"} relative`}>
+      <button
+        className={`bg-purple text-20 btn text-white rounded-15 text-center py-[25px] font-bold leading-5 relative z-10 w-full`}
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+        onMouseDown={() => setActive(true)}
+        onMouseUp={() => setActive(false)}
+        type="button"
+      >
+        {children}
+      </button>
       <div
         className={`absolute duration-200 ${
           hover ? "top-[5px] left-[5px]" : "top-[15px] left-[15px]"
-        } ${
-          focus && "top-0 left-0"
-        } w-full h-full  -z-10 rounded-15 bg-aqua-dark`}
+        } ${active && "top-0 left-0"} w-full h-full rounded-15 bg-aqua-dark`}
       ></div>
-    </button>
+    </div>
   );
 };
 
