@@ -4,6 +4,7 @@ const Button = ({ children, width }) => {
   const [hover, setHover] = useState(false);
   const [active, setActive] = useState(false);
 
+  console.log(active);
   return (
     <div className={`${width ?? "w-[380px]"} relative`}>
       <button
@@ -17,9 +18,13 @@ const Button = ({ children, width }) => {
         {children}
       </button>
       <div
-        className={`absolute duration-200 ${
-          hover ? "top-[5px] left-[5px]" : "top-[15px] left-[15px]"
-        } ${active && "top-0 left-0"} w-full h-full rounded-15 bg-aqua-dark`}
+        className={`absolute duration-200  ${
+          active
+            ? "top-0 left-0"
+            : hover
+            ? "top-[5px] left-[5px]"
+            : "top-[15px] left-[15px]"
+        } w-full h-full rounded-15 bg-aqua-dark`}
       ></div>
     </div>
   );
@@ -37,4 +42,10 @@ const ButtonProfile = ({ children, width }) => {
   );
 };
 
-export { Button, ButtonProfile };
+const ButtonSupport = () => {
+  return (
+    <span className="icon icon-support-chat fixed bottom-[30px] right-[210px] cursor-pointer z-20"></span>
+  );
+};
+
+export { Button, ButtonProfile, ButtonSupport };

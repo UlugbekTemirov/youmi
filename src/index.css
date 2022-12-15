@@ -6,6 +6,7 @@
 
 html {
   font-family: "Montserrat", sans-serif;
+  color: #4d4d52;
 }
 
 .icon {
@@ -22,12 +23,35 @@ html {
 }
 
 .icon-planet {
+  width: 220px;
+  height: 220px;
   background: url(./assets/icons/planet.svg);
   background-size: cover;
   mask-image: url(./assets/icons/planet.svg);
   -webkit-mask-image: url(./assets/icons/planet.svg);
 }
+.icon-checkmark {
+  width: 220px;
+  height: 220px;
+  background: url(./assets/icons/check-mark.svg);
+  background-size: cover;
+  mask-image: url(./assets/icons/check-mark.svg);
+  -webkit-mask-image: url(./assets/icons/check-mark.svg);
+}
+.icon-target {
+  width: 220px;
+  height: 220px;
+  background: url(./assets/icons/target.svg);
+  background-size: cover;
+  mask-image: url(./assets/icons/target.svg);
+  -webkit-mask-image: url(./assets/icons/target.svg);
+}
 
-body {
-  height: 1000px;
+.icon-support-chat {
+  width: 80px;
+  height: 80px;
+  background: url(./assets/icons/support-chat.svg);
+  background-size: cover;
+  mask-image: url(./assets/icons/support-chat.svg);
+  -webkit-mask-image: url(./assets/icons/support-chat.svg);
 }

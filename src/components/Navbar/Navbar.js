@@ -29,7 +29,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`py-[30px] box-border fixed top-0 left-1/2 -translate-x-1/2 w-full z-10 ${
+      className={`py-[30px] box-border fixed top-0 left-1/2 -translate-x-1/2 w-full z-20 ${
         top > 50 ? "bg-white shadow-navbar" : null
       }`}
     >
