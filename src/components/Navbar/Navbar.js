@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux/es/exports";
 
 // react-router-dom
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 // assests
 import youmiLogo from "../../assets/images/youmilogo.svg";
@@ -21,6 +21,7 @@ const Navbar = () => {
   const style = "text-charcoal font-semibold mr-[70px] cursor-pointer";
   const { showPage } = useSelector((state) => state.navbar);
   const dispatch = useDispatch();
+  const location = useLocation();
 
   // when page scrolled this function gets top value of page
   const [top, setTop] = useState(0);
@@ -59,7 +60,11 @@ const Navbar = () => {
               <li className={`${style} flex items-center relative`}>
                 <span
                   className={`mr-2 ${
-                    showPage ? "text-purple" : " text-charcoal"
+                    showPage ||
+                    location.pathname === "/blog" ||
+                    location.pathname === "/webinar"
+                      ? "text-purple"
+                      : " text-charcoal"
                   }`}
                   onClick={() => dispatch(setShowPage())}
                 >
@@ -72,10 +77,30 @@ const Navbar = () => {
                       className={`w-[180px] flex flex-col justify-center rounded-10 absolute top-10 -right-[28px] py-3 bg-white shadow-nav-page items-center duration-300`}
                     >
                       <li className="mb-2">
-                        <Link to="/blog">Блог</Link>
+                        <Link
+                          to="/blog"
+                          className={`${
+                            location.pathname === "/blog"
+                              ? "text-purple"
+                              : "text-charcoal"
+                          }`}
+                          onClick={() => dispatch(setShowPage(false))}
+                        >
+                          Блог
+                        </Link>
                       </li>
                       <li>
-                        <Link to="/webinar">Вебинары</Link>
+                        <Link
+                          to="/webinar"
+                          className={`${
+                            location.pathname === "/webinar"
+                              ? "text-purple"
+                              : "text-charcoal"
+                          }`}
+                          onClick={() => dispatch(setShowPage(false))}
+                        >
+                          Вебинары
+                        </Link>
                       </li>
                     </ul>
                   </>
