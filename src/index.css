@@ -82,3 +82,83 @@ html {
   mask-image: url(./assets/icons/underline.svg);
   -webkit-mask-image: url(./assets/icons/underline.svg);
 }
+
+.icon-calendar {
+  width: 100px;
+  height: 100px;
+  background: url(./assets/icons/calendarIcon.svg);
+  background-size: cover;
+  mask-image: url(./assets/icons/calendarIcon.svg);
+  -webkit-mask-image: url(./assets/icons/calendarIcon.svg);
+}
+
+.icon-plus {
+  width: 40px;
+  height: 40px;
+  background: url(./assets/icons/plus.svg);
+  background-size: cover;
+  mask-image: url(./assets/icons/plus.svg);
+  -webkit-mask-image: url(./assets/icons/plus.svg);
+}
+.icon-minus {
+  width: 40px;
+  height: 40px;
+  background: url(./assets/icons/minus.svg);
+  background-size: cover;
+  mask-image: url(./assets/icons/minus.svg);
+  -webkit-mask-image: url(./assets/icons/minus.svg);
+}
+
+.icon-correct {
+  width: 40px;
+  height: 35px;
+  background: url(./assets/icons/correct.svg);
+  background-size: cover;
+  mask-image: url(./assets/icons/correct.svg);
+  -webkit-mask-image: url(./assets/icons/correct.svg);
+}
+
+.icon-rocket {
+  width: 200px;
+  height: 200px;
+  background: url(./assets/icons/rocket.svg);
+  background-size: cover;
+  mask-image: url(./assets/icons/rocket.svg);
+  -webkit-mask-image: url(./assets/icons/rocket.svg);
+}
+
+.icon-lightbulb {
+  width: 200px;
+  height: 200px;
+  background: url(./assets/icons/lightbulb.svg);
+  background-size: cover;
+  mask-image: url(./assets/icons/lightbulb.svg);
+  -webkit-mask-image: url(./assets/icons/lightbulb.svg);
+}
+
+.icon-chat {
+  width: 200px;
+  height: 200px;
+  background: url(./assets/icons/chat.svg);
+  background-size: cover;
+  mask-image: url(./assets/icons/chat.svg);
+  -webkit-mask-image: url(./assets/icons/chat.svg);
+}
+
+.icon-quoteup {
+  width: 40px;
+  height: 40px;
+  background: url(./assets/icons/quoteup.svg);
+  background-size: cover;
+  mask-image: url(./assets/icons/quoteup.svg);
+  -webkit-mask-image: url(./assets/icons/quoteup.svg);
+}
+
+.icon-quotedown {
+  width: 40px;
+  height: 40px;
+  background: url(./assets/icons/quotedown.svg);
+  background-size: cover;
+  mask-image: url(./assets/icons/quotedown.svg);
+  -webkit-mask-image: url(./assets/icons/quotedown.svg);
+}

@@ -43,7 +43,7 @@ const ButtonProfile = ({ children, width }) => {
 
 const ButtonSupport = () => {
   return (
-    <span className="icon icon-support-chat fixed bottom-[30px] right-[210px] cursor-pointer z-20"></span>
+    <span className="icon icon-support-chat fixed bottom-[30px] right-[210px] cursor-pointer z-50"></span>
   );
 };
 

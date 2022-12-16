@@ -11,13 +11,17 @@ import Container from "../../layout/Container";
 import { Button } from "../../components/Button/Button";
 import ThreeCards from "../../components/Cards";
 import Carousel from "./components/Carousel";
+import FourStepFooter from "./components/FourStepFooter";
 import FourCards from "../../components/Cards/FourCards";
-import { FourSteps } from "../../components";
+import { FourSteps, Questionaire } from "../../components";
+import AppStoreSection from "../../layout/AppStoreSection";
+import Ambulance from "./components/Ambulance";
+import AppStoreContent from "./components/AppStoreContent";
 
 const Home = () => {
   return (
     <>
-      <Section img={homeSection}>
+      <Section blob img={homeSection}>
         <h1 className="text-44 text-purple font-bold">Вместе мы справимся</h1>
         <p className="text-40 font-semibold text-charcoal w-[420px] leading-[140%] mb-[70px] pt-[10px]">
           Найдите своего психолога онлайн
@@ -100,7 +104,41 @@ const Home = () => {
           <h1 className="text-40 text-purple mb-[80px] text-center font-extrabold">
             Сделайте 4 шага навстречу психотерапии
           </h1>
-          <FourSteps />
+          <FourSteps
+            header={[
+              "Заполните анкету,",
+              "Ознакомьтесь с профилями",
+              "Определите дату и время",
+              "Пройдите тестирование",
+            ]}
+            content={[
+              "ответив на 5 простых вопросов, определив тему и пожелания по психологу.",
+              "специалистов и посмотрите видео-визитки. Выберите психолога с которым вам будет комфортно.",
+              "первой сессии. Если у вас поменяются планы, вы сможете ее отменить или перенести.",
+              "в личном кабинете для того, чтобы сделать первую сессию более продуктивной.",
+            ]}
+          />
+          <FourStepFooter />
+        </Container>
+      </div>
+      <div>
+        <Container>
+          <Questionaire />
+        </Container>
+      </div>
+      <div className="py-[120px] bg-aqua-light">
+        <Container>
+          <AppStoreSection>
+            <AppStoreContent />
+          </AppStoreSection>
+          <div className="mt-[120px] flex justify-center">
+            <Button>Доступно в App Store</Button>
+          </div>
+        </Container>
+      </div>
+      <div className="pt-[150px] pb-[120px]">
+        <Container>
+          <Ambulance />
         </Container>
       </div>
     </>

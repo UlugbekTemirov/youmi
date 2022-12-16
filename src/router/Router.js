@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 // pages
-import { Home } from "../pages";
+import { About, Home } from "../pages";
 
 // components
 import { Navbar } from "../components";
@@ -14,6 +14,7 @@ const Router = () => {
       <ButtonSupport />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>

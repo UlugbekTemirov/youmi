@@ -2,7 +2,7 @@ import Container from "../layout/Container";
 
 import blobs from "../assets/images/blobs.svg";
 
-const Section = ({ children, img }) => {
+const Section = ({ children, img, blob }) => {
   return (
     <div className="w-full bg-aqua-light pb-[80px]">
       <Container>
@@ -12,7 +12,9 @@ const Section = ({ children, img }) => {
           </div>
           <div className="col-span-1 flex flex-col items-end justify-center relative">
             <img src={img} alt="section" />
-            <img className="absolute top-0 left-0" src={blobs} alt="blobs" />
+            {blob && (
+              <img className="absolute top-0 left-0" src={blobs} alt="blobs" />
+            )}
           </div>
         </div>
       </Container>
