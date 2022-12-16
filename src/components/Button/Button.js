@@ -4,7 +4,6 @@ const Button = ({ children, width }) => {
   const [hover, setHover] = useState(false);
   const [active, setActive] = useState(false);
 
-  console.log(active);
   return (
     <div className={`${width ?? "w-[380px]"} relative`}>
       <button

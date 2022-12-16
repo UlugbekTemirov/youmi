@@ -55,3 +55,30 @@ html {
   mask-image: url(./assets/icons/support-chat.svg);
   -webkit-mask-image: url(./assets/icons/support-chat.svg);
 }
+
+.icon-book {
+  width: 150px;
+  height: 150px;
+  background: url(./assets/icons/book.svg);
+  background-size: cover;
+  mask-image: url(./assets/icons/book.svg);
+  -webkit-mask-image: url(./assets/icons/book.svg);
+}
+
+.icon-watch {
+  width: 150px;
+  height: 150px;
+  background: url(./assets/icons/watch.svg);
+  background-size: cover;
+  mask-image: url(./assets/icons/watch.svg);
+  -webkit-mask-image: url(./assets/icons/watch.svg);
+}
+
+.icon-underline {
+  width: 321px;
+  height: 11px;
+  background: url(./assets/icons/underline.svg);
+  background-size: cover;
+  mask-image: url(./assets/icons/underline.svg);
+  -webkit-mask-image: url(./assets/icons/underline.svg);
+}

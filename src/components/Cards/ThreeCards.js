@@ -14,7 +14,7 @@ const ThreeCards = ({ header, body, img }) => {
         <span
           className={`icon icon-${img[1]} absolute top-0 left-1/2 -translate-x-1/2`}
         ></span>
-        <div className="h-[380px] bg-aqua rounded-[20px] pt-[130px] text-center">
+        <div className="max-h-[380px] pb-[45px] bg-aqua rounded-[20px] pt-[130px] text-center">
           <h1 className="font-semibold text-24 mb-[15px] px-16">{header[1]}</h1>
           <p className="text-18 px-[40px]">{body[1]}</p>
         </div>
@@ -25,7 +25,7 @@ const ThreeCards = ({ header, body, img }) => {
         ></span>
         <div className="h-[300px] bg-aqua rounded-[20px] pt-[130px] text-center">
           <h1 className="font-semibold text-24 mb-[15px]">{header[2]}</h1>
-          <p className="text-18 px-[40px]">{body[2]}</p>
+          <p className="text-18 px-[60px]">{body[2]}</p>
         </div>
       </div>
     </div>
