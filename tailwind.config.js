@@ -34,6 +34,7 @@ module.exports = {
       },
       boxShadow: {
         navbar: "0px 5px 25px rgba(130, 145, 159, 0.2)",
+        "nav-page": "0px 2px 20px rgba(130, 145, 159, 0.2)",
       },
     },
   },

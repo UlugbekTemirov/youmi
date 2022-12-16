@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux/es/exports";
 
 // react-router-dom
 import { Link } from "react-router-dom";
 
 // assests
 import youmiLogo from "../../assets/images/youmilogo.svg";
+import dropdown_icon from "../../assets/icons/dropdown.svg";
 
 // layout
 import Container from "../../layout/Container";
@@ -12,8 +14,13 @@ import Container from "../../layout/Container";
 // components
 import { ButtonProfile } from "../Button/Button";
 
+//actions
+import { setShowPage } from "./navbar_slice";
+
 const Navbar = () => {
   const style = "text-charcoal font-semibold mr-[70px] cursor-pointer";
+  const { showPage } = useSelector((state) => state.navbar);
+  const dispatch = useDispatch();
 
   // when page scrolled this function gets top value of page
   const [top, setTop] = useState(0);
@@ -49,8 +56,30 @@ const Navbar = () => {
               <li className={style}>
                 <Link to="/psychologists">Психологам</Link>
               </li>
-              <li className={style}>
-                <Link to="/materials">Материалы</Link>
+              <li className={`${style} flex items-center relative`}>
+                <span
+                  className={`mr-2 ${
+                    showPage ? "text-purple" : " text-charcoal"
+                  }`}
+                  onClick={() => dispatch(setShowPage())}
+                >
+                  Материалы
+                </span>
+                <img src={dropdown_icon} alt="" />
+                {showPage ? (
+                  <>
+                    <ul
+                      className={`w-[180px] flex flex-col justify-center rounded-10 absolute top-10 -right-[28px] py-3 bg-white shadow-nav-page items-center duration-300`}
+                    >
+                      <li className="mb-2">
+                        <Link to="/blog">Блог</Link>
+                      </li>
+                      <li>
+                        <Link to="/webinar">Вебинары</Link>
+                      </li>
+                    </ul>
+                  </>
+                ) : null}
               </li>
             </ul>
             <ButtonProfile>Личный кабинет</ButtonProfile>
