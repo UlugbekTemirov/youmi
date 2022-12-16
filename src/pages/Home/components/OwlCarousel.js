@@ -1,6 +1,5 @@
 import OwlCarousel from "react-owl-carousel";
 import CarouselButton from "./CarouselButton";
-// import OwlItems from "./OwlItems";
 
 const OwlCarouselDemo = () => {
   return (
