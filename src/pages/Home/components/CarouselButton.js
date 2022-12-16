@@ -1,7 +1,7 @@
-const CarouselButton = ({ children, selected }) => {
+const CarouselButton = ({ children, selected, width }) => {
   return (
     <div
-      className={`rounded-[40px] py-[7px] mr-[30px] px-[40px] text-20 font-semibold ${
+      className={`item text-center rounded-[40px] py-[7px] px-[40px] ${width} text-20 font-semibold ${
         selected
           ? "bg-purple text-white border-2 border-transparent"
           : "bg-transparent border-purple text-purple border-2"
@@ -12,4 +12,4 @@ const CarouselButton = ({ children, selected }) => {
   );
 };
 
-export { CarouselButton };
+export default CarouselButton;

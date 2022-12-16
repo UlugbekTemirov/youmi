@@ -149,7 +149,7 @@ const FourSteps = ({ arrowtype, header, content }) => {
       </div>
       <div className={`grid ${style1} mt-[150px]`}>
         <div className={`col-span-1 flex justify-start`}>
-          {!arrowtype && <img src={profiles} alt="profiles" />}
+          {!arrowtype && <img src={test} alt="profiles" />}
         </div>
         <div className={`${style2} flex items-center relative z-20`}>
           <div>

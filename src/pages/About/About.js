@@ -9,6 +9,7 @@ import ThreeCards from "../../components/Cards";
 import Professionals from "./components/Professionals";
 import FourCards from "../../components/Cards/FourCards";
 import HistoryOfProject from "./components/HistoryOfProject";
+import OwlCarouselDemo from "../Home/components/OwlCarousel";
 
 const About = () => {
   const textstyle = "font-extrabold text-44 text-purple";
@@ -86,7 +87,9 @@ const About = () => {
           <h1 className="text-center text-purple font-extrabold text-40 mb-[90px]">
             О нас пишут
           </h1>
-          <div>Place for carousel</div>
+          <div>
+            <OwlCarouselDemo />
+          </div>
         </Container>
       </div>
     </>

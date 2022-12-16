@@ -10,13 +10,13 @@ import Container from "../../layout/Container";
 // global components
 import { Button } from "../../components/Button/Button";
 import ThreeCards from "../../components/Cards";
-import Carousel from "./components/Carousel";
 import FourStepFooter from "./components/FourStepFooter";
 import FourCards from "../../components/Cards/FourCards";
 import { FourSteps, Questionaire } from "../../components";
 import AppStoreSection from "../../layout/AppStoreSection";
 import Ambulance from "./components/Ambulance";
 import AppStoreContent from "./components/AppStoreContent";
+import OwlCarouselDemo from "./components/OwlCarousel";
 
 const Home = () => {
   return (
@@ -69,7 +69,7 @@ const Home = () => {
             />
           </p>
         </Container>
-        <Carousel />
+        <OwlCarouselDemo />
       </div>
       <div className="py-[100px]">
         <Container>

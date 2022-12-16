@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import QuestionaireItem from "./QuestionareItem";
 
 const questions = [
@@ -42,8 +40,8 @@ const questions = [
 const Questionaire = () => {
   return (
     <div className="py-[110px]">
-      {questions.map((question) => (
-        <QuestionaireItem question={question} />
+      {questions.map((question, ind) => (
+        <QuestionaireItem key={ind} question={question} />
       ))}
     </div>
   );

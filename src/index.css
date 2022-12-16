@@ -162,3 +162,7 @@ html {
   mask-image: url(./assets/icons/quotedown.svg);
   -webkit-mask-image: url(./assets/icons/quotedown.svg);
 }
+
+.owl-item {
+  width: initial !important;
+}
