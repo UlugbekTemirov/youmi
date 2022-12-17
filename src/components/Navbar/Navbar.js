@@ -61,7 +61,7 @@ const Navbar = () => {
                 <span
                   className={`mr-2 ${
                     showPage ||
-                    location.pathname === "/blog" ||
+                    location.pathname.substring(0, 5) === "/blog" ||
                     location.pathname === "/webinar"
                       ? "text-purple"
                       : " text-charcoal"
