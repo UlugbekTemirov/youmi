@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 // pages
 
-import { Blog, CategoryItem, CategoryItemAnswers, Home, About } from "../pages";
+import { Blog, CategoryItem, Home, About, Rates } from "../pages";
 
 // components
 import { Footer, Navbar } from "../components";
@@ -19,7 +19,7 @@ const Router = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/category/:name" element={<CategoryItem />} />
         <Route path="/about" element={<About />} />
-
+        <Route path="/tarif" element={<Rates />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <Footer />

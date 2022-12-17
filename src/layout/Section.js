@@ -2,15 +2,25 @@ import Container from "../layout/Container";
 
 import blobs from "../assets/images/blobs.svg";
 
-const Section = ({ children, img, blob }) => {
+const Section = ({ children, img, blob, widths }) => {
   return (
     <div className="w-full bg-aqua-light pb-[80px]">
       <Container>
-        <div className="pt-[200px] grid grid-cols-2 w-full">
-          <div className="col-span-1 flex flex-col justify-center">
+        <div
+          className={`pt-[200px] grid ${widths?.grid ?? "grid-cols-2"} w-full`}
+        >
+          <div
+            className={`${
+              widths?.content ?? "col-span-1"
+            }  flex flex-col justify-center`}
+          >
             {children}
           </div>
-          <div className="col-span-1 flex flex-col items-end justify-center relative">
+          <div
+            className={`${
+              widths?.img ?? "col-span-1"
+            } flex flex-col items-end justify-center relative`}
+          >
             <img src={img} alt="section" />
             {blob && (
               <img className="absolute top-0 left-0" src={blobs} alt="blobs" />

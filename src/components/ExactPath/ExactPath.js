@@ -3,6 +3,7 @@ import right_arrow from "../../assets/icons/right-arrow.svg";
 import search_icon from "../../assets/icons/search.svg";
 import { useSelector, useDispatch } from "react-redux";
 import { setShowSearch } from "./exactpath_slice";
+import { Link } from "react-router-dom";
 
 const ExactPath = ({ name, question }) => {
   const { showSearch } = useSelector((state) => state.exactpath);
@@ -43,14 +44,23 @@ const ExactPath = ({ name, question }) => {
       <Container>
         <div className="flex justify-between items-center">
           <div className="text-24 font-semibold">
-            <span>Категории</span>
+            <span>
+              <Link to="/blog">Категории</Link>
+            </span>
             <img className="inline-block mx-8" src={right_arrow} alt="" />
-            <span>{addedPath.length ? addedPath[0].rus : "Not found"}</span>
+            <span>
+              <Link to={`/blog/category/${name}`}>
+                {" "}
+                {addedPath.length ? addedPath[0].rus : "Not found"}
+              </Link>{" "}
+            </span>
             {question ? (
               <>
                 <img className="inline-block mx-8" src={right_arrow} alt="" />
                 <span>
-                  {addedQuestion.length ? addedQuestion[0].rus : "Not found"}
+                  <Link to={`/blog/category/${name}?question=${question}`}>
+                    {addedQuestion.length ? addedQuestion[0].rus : "Not found"}
+                  </Link>
                 </span>
               </>
             ) : null}
