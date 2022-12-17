@@ -47,7 +47,7 @@ const ButtonSupport = ({ onClick }) => {
   return (
     <span
       onClick={onClick}
-      className="icon icon-support-chat fixed bottom-[30px] right-[210px] cursor-pointer z-50"
+      className="icon icon-support-chat fixed bottom-[30px] right-[50px] cursor-pointer z-50"
     ></span>
   );
 };

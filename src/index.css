@@ -163,6 +163,15 @@ html {
   -webkit-mask-image: url(./assets/icons/quotedown.svg);
 }
 
+.icon-telephone {
+  width: 120px;
+  height: 120px;
+  background: url(./assets/icons/telephone.svg);
+  background-size: cover;
+  mask-image: url(./assets/icons/telephone.svg);
+  -webkit-mask-image: url(./assets/icons/telephone.svg);
+}
+
 .owl-item {
   width: initial !important;
 }

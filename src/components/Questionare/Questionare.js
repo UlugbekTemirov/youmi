@@ -1,3 +1,4 @@
+import Container from "../../layout/Container";
 import QuestionaireItem from "./QuestionareItem";
 
 const questions = [
@@ -39,11 +40,16 @@ const questions = [
 
 const Questionaire = () => {
   return (
-    <div className="py-[110px]">
-      {questions.map((question, ind) => (
-        <QuestionaireItem key={ind} question={question} />
-      ))}
-    </div>
+    <Container>
+      <div id="#questionare" className="py-[110px]">
+        <h1 className="text-40 text-purple font-extrabold text-center mb-[60px]">
+          Вопросы - ответы
+        </h1>
+        {questions.map((question, ind) => (
+          <QuestionaireItem key={ind} question={question} />
+        ))}
+      </div>
+    </Container>
   );
 };
 
