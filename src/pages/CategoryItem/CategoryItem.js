@@ -1,16 +1,20 @@
-import { ExactPath, Navbar } from "../../components";
+import { ExactPath, Footer, Navbar } from "../../components";
 import { useParams } from "react-router-dom";
-import Container from "../../layout/Container";
+import CategoryItemList from "./components/CategoryItemList";
+import { useQuery } from "../../hooks/useQuery";
+import CategoryItemAnswers from "./components/CategoryItemAnswers";
 
 const CategoryItem = () => {
   const { name } = useParams();
+  let query = useQuery();
+  const question = query.get("question");
   return (
     <div>
-      <Navbar />
-      <div className="pt-[150px]"></div>
-      <Container>
-        <ExactPath name={name} />
-      </Container>
+      <div className="pt-[150px]">
+        <ExactPath name={name} question={question ? question : null} />
+        {question ? <CategoryItemAnswers /> : <CategoryItemList name={name} />}
+        <Footer />
+      </div>
     </div>
   );
 };
