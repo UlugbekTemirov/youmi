@@ -43,7 +43,7 @@ const categoryItemList = [
 
 const CategoryItemList = ({ name }) => {
   return (
-    <div>
+    <div className="pb-[120px]">
       <Container>
         <div className="grid grid-cols-3 gap-10">
           {categoryItemList.map((item, index) => (

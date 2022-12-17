@@ -18,7 +18,6 @@ const Blog = () => {
       <Categories />
       <Filters />
       <HugPhone />
-      <Footer />
     </div>
   );
 };

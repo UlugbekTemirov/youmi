@@ -13,7 +13,6 @@ const CategoryItem = () => {
       <div className="pt-[150px]">
         <ExactPath name={name} question={question ? question : null} />
         {question ? <CategoryItemAnswers /> : <CategoryItemList name={name} />}
-        <Footer />
       </div>
     </div>
   );

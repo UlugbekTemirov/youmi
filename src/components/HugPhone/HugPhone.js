@@ -4,7 +4,7 @@ import hugphone from "../../assets/images/hugphone.svg";
 
 const HugPhone = () => {
   return (
-    <div className=" mt-40">
+    <div className="pt-40 pb-[120px]">
       <Container>
         <div className="bg-aqua-light grid grid-cols-2 box-border px-[120px] py-[80px] max-h-[400px] rounded-[20px]">
           <div className="col-span-1">

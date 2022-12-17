@@ -2,10 +2,10 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 // pages
 
-import { Blog, CategoryItem, CategoryItemAnswers, Home,  About } from "../pages";
+import { Blog, CategoryItem, CategoryItemAnswers, Home, About } from "../pages";
 
 // components
-import { Navbar } from "../components";
+import { Footer, Navbar } from "../components";
 import { ButtonSupport } from "../components/Button/Button";
 
 const Router = () => {
@@ -22,6 +22,7 @@ const Router = () => {
 
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };

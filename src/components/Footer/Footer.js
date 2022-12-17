@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="bg-aqua-light mt-[120px] py-[80px]">
+    <div className="bg-aqua-light py-[80px]">
       <Container>
         <div className="grid grid-cols-5 box-border">
           <div className="flex flex-col justify-between">

@@ -19,8 +19,11 @@ const CategoryItemAnswers = () => {
         <div className="text-20 w-[800px] mx-auto">
           <div>
             <span>Тэги</span>
-            {data.tags.map((item) => (
-              <span className="inline-block w-[180px] bg-aqua ml-6 rounded-[30px] text-center py-[6px]">
+            {data.tags.map((item, index) => (
+              <span
+                key={index}
+                className="inline-block w-[180px] bg-aqua ml-6 rounded-[30px] text-center py-[6px]"
+              >
                 {item}
               </span>
             ))}
