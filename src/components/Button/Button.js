@@ -1,13 +1,13 @@
 import { useState } from "react";
 
-const Button = ({ children, width }) => {
+const Button = ({ children, width, onClick }) => {
   const [hover, setHover] = useState(false);
   const [active, setActive] = useState(false);
 
-  console.log(active);
   return (
     <div className={`${width ?? "w-[380px]"} relative`}>
       <button
+        onClick={onClick}
         className={`bg-purple text-20 btn text-white rounded-15 text-center py-[25px] font-bold leading-5 relative z-10 w-full`}
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
@@ -30,9 +30,10 @@ const Button = ({ children, width }) => {
   );
 };
 
-const ButtonProfile = ({ children, width }) => {
+const ButtonProfile = ({ children, width, onClick }) => {
   return (
     <button
+      onClick={onClick}
       className={`bg-white hover:bg-[#F5F5F5] active:bg-purple active:text-white duration-200 border-purple border-2 font-semibold text-purple py-[14px]  rounded-10 leading-[22.4px] ${
         width ?? "w-[240px]"
       }`}
@@ -42,9 +43,12 @@ const ButtonProfile = ({ children, width }) => {
   );
 };
 
-const ButtonSupport = () => {
+const ButtonSupport = ({ onClick }) => {
   return (
-    <span className="icon icon-support-chat fixed bottom-[30px] right-[210px] cursor-pointer z-20"></span>
+    <span
+      onClick={onClick}
+      className="icon icon-support-chat fixed bottom-[30px] right-[210px] cursor-pointer z-50"
+    ></span>
   );
 };
 
