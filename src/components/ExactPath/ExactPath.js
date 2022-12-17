@@ -4,9 +4,10 @@ import search_icon from "../../assets/icons/search.svg";
 import { useSelector, useDispatch } from "react-redux";
 import { setShowSearch } from "./exactpath_slice";
 
-const ExactPath = ({ name }) => {
+const ExactPath = ({ name, question }) => {
   const { showSearch } = useSelector((state) => state.exactpath);
   const dispatch = useDispatch();
+  console.log(question);
 
   const paths = [
     {
@@ -26,16 +27,33 @@ const ExactPath = ({ name }) => {
       rus: "Депрессивное состояние",
     },
   ];
+
+  const questions = [
+    {
+      eng: "how-to-overcome-anxiety",
+      rus: "Как побороть тревогу?",
+    },
+  ];
+
   const addedPath = paths.filter((item) => item.eng === name);
+  const addedQuestion = questions.filter((item) => item.eng === question);
 
   return (
-    <div>
+    <div className="mb-16">
       <Container>
         <div className="flex justify-between items-center">
           <div className="text-24 font-semibold">
             <span>Категории</span>
             <img className="inline-block mx-8" src={right_arrow} alt="" />
             <span>{addedPath.length ? addedPath[0].rus : "Not found"}</span>
+            {question ? (
+              <>
+                <img className="inline-block mx-8" src={right_arrow} alt="" />
+                <span>
+                  {addedQuestion.length ? addedQuestion[0].rus : "Not found"}
+                </span>
+              </>
+            ) : null}
           </div>
           <div
             className={`flex items-center bg-aqua px-2 duration-200 ${
