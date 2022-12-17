@@ -201,6 +201,15 @@ html {
   -webkit-mask-image: url(./assets/icons/checked.svg);
 }
 
+.icon-checked-white {
+  width: 13px;
+  height: 9px;
+  background: #fff;
+  background-size: cover;
+  mask-image: url(./assets/icons/check-white.svg);
+  -webkit-mask-image: url(./assets/icons/check-white.svg);
+}
+
 .owl-item {
   width: initial !important;
 }

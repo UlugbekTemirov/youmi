@@ -6,7 +6,7 @@ import StepFour from "./StepFour";
 import StepFive from "./StepFive";
 import Container from "../../../layout/Container";
 
-const SwitchSteps = ({ step }) => {
+const SwitchSteps = ({ step, getAll }) => {
   let whichStep;
   switch (step) {
     case "step_one":

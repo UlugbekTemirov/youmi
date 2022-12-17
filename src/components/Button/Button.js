@@ -1,6 +1,15 @@
 import { useState } from "react";
 
-const Button = ({ children, width, onClick, disabled, top, left, py }) => {
+const Button = ({
+  children,
+  width,
+  onClick,
+  disabled,
+  top,
+  left,
+  py,
+  type,
+}) => {
   const [hover, setHover] = useState(false);
   const [active, setActive] = useState(false);
 
@@ -20,7 +29,7 @@ const Button = ({ children, width, onClick, disabled, top, left, py }) => {
         onMouseLeave={() => setHover(false)}
         onMouseDown={() => setActive(true)}
         onMouseUp={() => setActive(false)}
-        type="button"
+        type={type ?? "button"}
       >
         {children}
       </button>

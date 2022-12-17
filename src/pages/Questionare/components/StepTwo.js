@@ -11,24 +11,36 @@ const StepTwo = () => {
   };
 
   const [education, setEducation] = useState("yes");
-  const [file, setFile] = useState(null);
+  const [file, setFile] = useState([]);
+
+  const getBase64 = (e) => {
+    const uploadFile = e.target.files[0];
+    const reader = new FileReader();
+    reader.readAsDataURL(uploadFile);
+    reader.onload = () => {
+      setFile((prev) => [...prev, reader.result]);
+    };
+    reader.onerror = function (err) {
+      console.log(err);
+    };
+  };
 
   const labelStyle = "block mb-[15px] text-16 font-[500]";
   const inputStyle =
     "border border-purple rounded-10 w-full py-[9px] px-[20px] text-16";
-
   const radioStyle =
     "py-[10px] rounded-10 text-16 block text-center border border-purple mr-5 last:mr-0 cursor-pointer";
+
   return (
     <div>
       <Container>
         <div className="max-w-[580px] mx-auto">
-          <h1 className="mt-[60px] text-20 font-semibold text-purple">
+          <h1 className="text-20 font-semibold text-purple">
             Шаг 2 <br />
             Образование
           </h1>
 
-          <form onSubmit={submitHandler} className="mt-[50px] mb-[70px]">
+          <div className="mt-[50px] mb-[70px]">
             <div>
               <h1 className="font-[500] mb-[15px] text-16">
                 У вас есть законченное высшее психологическое либо
@@ -103,28 +115,33 @@ const StepTwo = () => {
               <label htmlFor="university" className={labelStyle}>
                 Название ВУЗа (полностью)
               </label>
-              <input className={inputStyle} id="university" type="text" />
+              <input
+                name="university"
+                className={inputStyle}
+                id="university"
+                type="text"
+              />
             </div>
             <div className="mt-[30px]">
               <label className={labelStyle}>Факультет</label>
-              <input className={inputStyle} type="text" />
+              <input name="faculty" className={inputStyle} type="text" />
             </div>
             <div className="mt-[30px]">
               <label className={labelStyle}>Специальность</label>
-              <input className={inputStyle} type="text" />
+              <input name="speciality" className={inputStyle} type="text" />
             </div>
             <div className="mt-[30px]">
               <label className={labelStyle}>Степень</label>
-              <input className={inputStyle} type="number" />
+              <input name="degree" className={inputStyle} type="number" />
             </div>
             <div className="mt-[30px] grid grid-cols-2 gap-4">
               <div>
                 <label className={labelStyle}>Год начала</label>
-                <input className={inputStyle} type="text" />
+                <input name="startDate" className={inputStyle} type="text" />
               </div>
               <div>
                 <label className={labelStyle}>Год окончания</label>
-                <input className={inputStyle} type="text" />
+                <input name="finishDate" className={inputStyle} type="text" />
               </div>
             </div>
             <div className="flex justify-center items-center">
@@ -149,14 +166,25 @@ const StepTwo = () => {
                   alt="certificate"
                   className="cursor-pointer"
                 />
-                <label
-                  htmlFor="upload"
-                  className="w-[90px] h-[127px] ml-1 flex items-center justify-center hover:bg-gray-100 cursor-pointer duration-150 rounded-10"
-                >
-                  <span className="icon icon-plus-mini"></span>
-                </label>
+                {file?.map((item, index) => (
+                  <img
+                    key={index}
+                    src={item}
+                    className="cursor-pointer ml-1 w-[90px] h-[127px] hover:border-2 hover:border-purple duration-100"
+                    alt="certificate"
+                  />
+                ))}
+                {file.length <= 3 && (
+                  <label
+                    htmlFor="upload"
+                    className="w-[90px] h-[127px] ml-1 flex items-center justify-center hover:bg-gray-100 cursor-pointer duration-150 rounded-10"
+                  >
+                    <span className="icon icon-plus-mini"></span>
+                  </label>
+                )}
                 <input
-                  onChange={(e) => setFile(e.currentTarget.files[0])}
+                  name="files"
+                  onChange={(e) => getBase64(e)}
                   type="file"
                   id="upload"
                   accept="image/png, image/jpg, image/jpeg"
@@ -164,7 +192,7 @@ const StepTwo = () => {
                 />
               </div>
             </div>
-          </form>
+          </div>
         </div>
       </Container>
     </div>

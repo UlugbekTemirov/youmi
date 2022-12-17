@@ -61,7 +61,7 @@ const Carousel = () => {
         ))}
       </OwlCarousel>
       <OwlCarousel
-        className="owl-theme -mt-[30px]"
+        className="owl-theme mt-[30px]"
         dots={false}
         autoplay
         autoplayTimeout={2000}

@@ -5,11 +5,6 @@ import Container from "../../../layout/Container";
 const StepOne = () => {
   const [gender, setGender] = useState("male");
 
-  const submitHandler = (e) => {
-    e.preventDefault();
-    console.log("ok");
-  };
-
   const labelStyle = "block mb-[15px] text-16 font-[500]";
   const inputStyle =
     "border border-purple rounded-10 w-full py-[9px] px-[20px] text-16";
@@ -17,25 +12,25 @@ const StepOne = () => {
   return (
     <div>
       <h1 className="text-center font-extrabold text-40 text-purple">
-        Станьте частью{" "}
+        Станьте частью
         <span className="relative">
           команды YouMi
           <span className="icon icon-underline absolute -bottom-3 left-2"></span>
         </span>
       </h1>
-      <p className="mt-[36px] text-center max-w-[740px] mx-auto text-18 leader-[140%]">
-        Анкета включает в себя{" "}
-        <span className="font-semibold text-purple">5 этапов.</span> <br />{" "}
+      <p className="mb-[60px] mt-[36px] text-center max-w-[740px] mx-auto text-18 leader-[140%]">
+        Анкета включает в себя
+        <span className="font-semibold text-purple"> 5 этапов.</span> <br />
         Пожалуйста, ответьте на вопросы и приготовьте заранее сканы ваших
         дипломов и сертификатов, они понадобятся вам в ходе заполнения.
       </p>
       <Container>
         <div className="max-w-[480px] mx-auto">
-          <h1 className="mt-[60px] text-20 font-semibold text-purple">
+          <h1 className="text-20 font-semibold text-purple">
             Шаг 1 <br /> Личные данные
           </h1>
 
-          <form onSubmit={submitHandler} className="mt-[50px] mb-[70px]">
+          <div className="mt-[50px] mb-[70px]">
             <div>
               <label htmlFor="full_name" className={labelStyle}>
                 ФИО
@@ -44,6 +39,7 @@ const StepOne = () => {
                 className={inputStyle}
                 placeholder="Иванова Анна Дмитриевна"
                 id="full_name"
+                name="fullName"
                 type="text"
               />
             </div>
@@ -93,16 +89,19 @@ const StepOne = () => {
               <label className={labelStyle}>Дата рождения</label>
               <div className="flex items-center">
                 <input
+                  name="day"
                   className="border border-purple py-[9px] rounded-10 w-[60px] text-center mr-[10px]"
                   type="number"
                   placeholder="01"
                 />
                 <input
+                  name="month"
                   className="border border-purple py-[9px] rounded-10 w-[60px] text-center mr-[10px]"
                   type="number"
                   placeholder="01"
                 />
                 <input
+                  name="year"
                   className="border border-purple py-[9px] rounded-10 w-[100px] text-center"
                   type="number"
                   placeholder="1991"
@@ -111,15 +110,16 @@ const StepOne = () => {
             </div>
             <div className="mt-[30px]">
               <label className={labelStyle}>Гражданство</label>
-              <input className={inputStyle} type="text" />
+              <input name="civil" className={inputStyle} type="text" />
             </div>
             <div className="mt-[30px]">
               <label className={labelStyle}>Страна и город проживания</label>
-              <input className={inputStyle} type="text" />
+              <input name="bornCity" className={inputStyle} type="text" />
             </div>
             <div className="mt-[30px]">
               <label className={labelStyle}>Номер телефона для связи</label>
               <input
+                name="phoneNumber"
                 className={inputStyle}
                 type="number"
                 placeholder="+7 (___)"
@@ -127,17 +127,17 @@ const StepOne = () => {
             </div>
             <div className="mt-[30px]">
               <label className={labelStyle}>Электронная почта</label>
-              <input className={inputStyle} type="email" />
+              <input name="emailAddress" className={inputStyle} type="email" />
             </div>
             <div className="mt-[30px]">
               <label className={labelStyle}>Социальные сети</label>
-              <input className={inputStyle} type="text" />
+              <input name="socials" className={inputStyle} type="text" />
             </div>
             <p className="text-[14px] mt-[10px]">
               Страницы в социальных сетях, личный сайт, блог, упоминание на
               сайтах конференций или профессиональных ассоциаций.
             </p>
-          </form>
+          </div>
         </div>
       </Container>
     </div>

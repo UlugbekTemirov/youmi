@@ -3,6 +3,7 @@ import StepDots from "./StepDots";
 import { Button, ButtonBack } from "../../../components/Button/Button";
 
 import { Navigate, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const QuestionareFooter = ({ steps, setSteps, allow, step }) => {
   const navigate = useNavigate();
@@ -28,6 +29,7 @@ const QuestionareFooter = ({ steps, setSteps, allow, step }) => {
     const a = steps.indexOf(current_step[0]);
     const newSteps = [...steps];
     newSteps[a + 1].allowed = true;
+    newSteps[a].isCompleted = true;
     setSteps(newSteps);
     navigate(`/questionare/${newSteps[a + 1].name}`);
   };
@@ -45,6 +47,7 @@ const QuestionareFooter = ({ steps, setSteps, allow, step }) => {
           </ButtonBack>
         ) : null}
         <Button
+          type="submit"
           top="top-[10px]"
           left="left-[10px]"
           py="py-[20px]"

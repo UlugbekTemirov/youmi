@@ -18,15 +18,29 @@ const Questionare = () => {
     { order: 5, name: "step_five", isCompleted: false, allowed: false },
   ]);
 
+  const [allData, setAllData] = useState([]);
+
+  const handleSubmit = (e) => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    setAllData((prev) => [...prev, formData]);
+  };
+
   return (
     <div className="pt-[80px] pb-[100px]">
-      <SwitchSteps step={step} />
-      <QuestionareFooter
-        steps={steps}
-        setSteps={setSteps}
-        step={step}
-        allow={allow}
-      />
+      <form onSubmit={handleSubmit}>
+        <SwitchSteps step={step} />
+        <QuestionareFooter
+          steps={steps}
+          setSteps={setSteps}
+          step={step}
+          allow={allow}
+        />
+      </form>
     </div>
   );
 };
