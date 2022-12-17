@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 // pages
-import { About, Home } from "../pages";
+
+import { Blog, CategoryItem, CategoryItemAnswers, Home,  About } from "../pages";
 
 // components
 import { Navbar } from "../components";
@@ -14,7 +15,11 @@ const Router = () => {
       <ButtonSupport />
       <Routes>
         <Route path="/" element={<Home />} />
+
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/category/:name" element={<CategoryItem />} />
         <Route path="/about" element={<About />} />
+
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
