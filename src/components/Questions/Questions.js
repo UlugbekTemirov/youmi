@@ -1,5 +1,5 @@
 import Container from "../../layout/Container";
-import QuestionaireItem from "./QuestionareItem";
+import QuestionsItems from "./QuestionsItems";
 
 const questions = [
   {
@@ -38,7 +38,7 @@ const questions = [
   },
 ];
 
-const Questionaire = () => {
+const Questions = () => {
   return (
     <Container>
       <div id="#questionare" className="py-[110px]">
@@ -46,11 +46,11 @@ const Questionaire = () => {
           Вопросы - ответы
         </h1>
         {questions.map((question, ind) => (
-          <QuestionaireItem key={ind} question={question} />
+          <QuestionsItems key={ind} question={question} />
         ))}
       </div>
     </Container>
   );
 };
 
-export default Questionaire;
+export default Questions;

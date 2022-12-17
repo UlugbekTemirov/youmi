@@ -7,6 +7,7 @@
 html {
   font-family: "Montserrat", sans-serif;
   color: #4d4d52;
+  box-sizing: border-box;
 }
 
 .icon {
@@ -100,6 +101,16 @@ html {
   mask-image: url(./assets/icons/plus.svg);
   -webkit-mask-image: url(./assets/icons/plus.svg);
 }
+
+.icon-plus-mini {
+  width: 26px;
+  height: 26px;
+  background: url(./assets/icons/plus.svg);
+  background-size: cover;
+  mask-image: url(./assets/icons/plus.svg);
+  -webkit-mask-image: url(./assets/icons/plus.svg);
+}
+
 .icon-minus {
   width: 40px;
   height: 40px;
@@ -172,6 +183,36 @@ html {
   -webkit-mask-image: url(./assets/icons/telephone.svg);
 }
 
+.icon-coin {
+  width: 280px;
+  height: 280px;
+  background: url(./assets/icons/coin.svg);
+  background-size: cover;
+  mask-image: url(./assets/icons/coin.svg);
+  -webkit-mask-image: url(./assets/icons/coin.svg);
+}
+
+.icon-checked {
+  width: 25px;
+  height: 25px;
+  background: #fff;
+  background-size: cover;
+  mask-image: url(./assets/icons/checked.svg);
+  -webkit-mask-image: url(./assets/icons/checked.svg);
+}
+
 .owl-item {
   width: initial !important;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }

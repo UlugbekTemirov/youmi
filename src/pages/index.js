@@ -4,5 +4,18 @@ import CategoryItem from "./CategoryItem/CategoryItem";
 import CategoryItemAnswers from "./CategoryItem/components/CategoryItemAnswers";
 import About from "./About/About";
 import Contacts from "./Contacts/Contacts";
+import SuccessScreen from "./Screens/SuccessScreen";
+import PaymentScreen from "./Screens/PaymentScreen";
+import Questionare from "./Questionare/Questionare";
 
-export { Home, Blog, CategoryItem, CategoryItemAnswers, About, Contacts };
+export {
+  Home,
+  Blog,
+  CategoryItem,
+  CategoryItemAnswers,
+  About,
+  Contacts,
+  SuccessScreen,
+  PaymentScreen,
+  Questionare,
+};

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const QuestionaireItem = ({ question }) => {
+const QuestionsItems = ({ question }) => {
   const [open, setOpen] = useState(false);
   return (
     <div
@@ -25,4 +25,4 @@ const QuestionaireItem = ({ question }) => {
   );
 };
 
-export default QuestionaireItem;
+export default QuestionsItems;

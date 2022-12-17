@@ -1,5 +1,5 @@
 // global components
-import { Questionaire } from "../../components";
+import { Questions } from "../../components";
 import Ambulance from "./components/Ambulance";
 import OnlinePsychology from "./components/OnlinePsychology";
 import Carousel from "./components/Carousel";
@@ -9,6 +9,11 @@ import AppStore from "./components/AppStore";
 import FindYourPsyOnline from "./components/FindYourPsyOnline";
 
 const Home = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+
   return (
     <>
       <FindYourPsyOnline />
@@ -16,7 +21,7 @@ const Home = () => {
       <Carousel />
       <WeWorkWith />
       <MakeFourSteps />
-      <Questionaire />
+      <Questions />
       <AppStore />
       <Ambulance />
     </>

@@ -29,11 +29,23 @@ const Navbar = () => {
     const handleScroll = (event) => {
       setTop(window.scrollY);
     };
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  let path = location.pathname;
+  path = path.substring(1, 12);
+
+  if (path === "questionare") {
+    return (
+      <div className={`pt-[70px] box-border w-full z-50 flex justify-center`}>
+        <img className="w-[180px]" src={youmiLogo} alt="logo" />
+      </div>
+    );
+  }
 
   return (
     <div
