@@ -4,7 +4,6 @@ import StepTwo from "./StepTwo";
 import StepThree from "./StepThree";
 import StepFour from "./StepFour";
 import StepFive from "./StepFive";
-import Container from "../../../layout/Container";
 
 const SwitchSteps = ({ step }) => {
   let whichStep;

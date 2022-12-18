@@ -5,7 +5,7 @@ import Container from "../../../layout/Container";
 import certificate from "../../../assets/images/certificate.svg";
 
 const StepTwo = () => {
-  const [education, setEducation] = useState("yes");
+  const [education, setEducation] = useState(null);
   const [file, setFile] = useState([]);
 
   const getBase64 = (e) => {

@@ -52,6 +52,7 @@ const ButtonBack = ({ children, style, onClick, mr }) => {
   return (
     <button
       onClick={onClick}
+      type="button"
       className={`text-20 btn text-purple bg-transparent border-purple border hover:bg-purple hover:text-white duration-200 rounded-15 text-center py-[20px] font-semibold leading-5 w-[220px] ${
         mr ?? null
       }`}
