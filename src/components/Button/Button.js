@@ -10,9 +10,6 @@ const Button = ({
   py,
   type,
 }) => {
-  const [hover, setHover] = useState(false);
-  const [active, setActive] = useState(false);
-
   return (
     <div className={`${width ?? "w-[380px]"} relative`}>
       <button
@@ -24,23 +21,15 @@ const Button = ({
             : "bg-gray-300 text-gray-900 cursor-not-allowed"
         } text-20 btn text-white rounded-15 text-center ${
           py ?? "py-[25px]"
-        } font-bold leading-5 relative z-10 w-full`}
-        onMouseEnter={() => setHover(true)}
-        onMouseLeave={() => setHover(false)}
-        onMouseDown={() => setActive(true)}
-        onMouseUp={() => setActive(false)}
+        } font-bold leading-5 relative z-10 w-full main-button`}
         type={type ?? "button"}
       >
         {children}
       </button>
       <div
-        className={`absolute duration-200  ${
-          active
-            ? "top-0 left-0"
-            : hover
-            ? "top-[5px] left-[5px]"
-            : `${top ?? "top-[15px]"} ${left ?? "left-[15px]"}`
-        } w-full h-full rounded-15 bg-aqua-dark`}
+        className={`absolute duration-200 ${top ?? "top-[15px]"} ${
+          left ?? "left-[15px]"
+        } w-full h-full rounded-15 bg-aqua-dark main-button-shadow`}
       ></div>
     </div>
   );

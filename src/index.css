@@ -225,3 +225,13 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
+.main-button:hover ~ .main-button-shadow {
+  top: 5px;
+  left: 5px;
+}
+
+.main-button:active ~ .main-button-shadow {
+  top: 0;
+  left: 0;
+}

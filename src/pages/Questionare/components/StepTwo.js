@@ -5,11 +5,6 @@ import Container from "../../../layout/Container";
 import certificate from "../../../assets/images/certificate.svg";
 
 const StepTwo = () => {
-  const submitHandler = (e) => {
-    e.preventDefault();
-    console.log("ok submited");
-  };
-
   const [education, setEducation] = useState("yes");
   const [file, setFile] = useState([]);
 
