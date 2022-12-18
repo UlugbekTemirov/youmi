@@ -54,55 +54,53 @@ const tarifs = [
 
 const Tarif = () => {
   return (
-    <div className="pt-[110px]">
-      <Container>
-        <h1 className="text-center text-purple font-extrabold text-40 mb-[50px]">
-          Тарифы
-        </h1>
-        <div className="grid grid-cols-4 gap-6">
-          {tarifs.map((item) => (
-            <div>
-              <div className="flex flex-col rounded-15 bg-aqua-light overflow-hidden h-full">
-                <div className="bg-aqua py-[16px]">
-                  <p className="text-18 font-medium text-center">{`${item.seesionCount} сесии`}</p>
-                </div>
-                <div className="flex flex-col px-[30px] justify-between h-[292px]">
-                  <div>
-                    <div className="text-purple">
-                      <h1 className=" text-24 font-bold leading-7 text-center mt-4 mb-2">{`${item.cost}₽`}</h1>
-                      <p className="text-20 font-medium leading-4 text-center mb-5">
-                        за сессию
-                      </p>
-                    </div>
-                    <button className="bg-purple rounded-10 text-white text-18 font-semibold py-[10px] mb-4 w-full">
-                      {`Оплатить`} <br /> {`${item.seesionCount * item.cost}₽`}
-                    </button>
+    <Container>
+      <h1 className="text-center text-purple font-extrabold text-40 mb-[50px]">
+        Тарифы
+      </h1>
+      <div className="grid grid-cols-4 gap-6">
+        {tarifs.map((item) => (
+          <div>
+            <div className="flex flex-col rounded-15 bg-aqua-light overflow-hidden h-full">
+              <div className="bg-aqua py-[16px]">
+                <p className="text-18 font-medium text-center">{`${item.seesionCount} сесии`}</p>
+              </div>
+              <div className="flex flex-col px-[30px] justify-between h-[292px]">
+                <div>
+                  <div className="text-purple">
+                    <h1 className=" text-24 font-bold leading-7 text-center mt-4 mb-2">{`${item.cost}₽`}</h1>
+                    <p className="text-20 font-medium leading-4 text-center mb-5">
+                      за сессию
+                    </p>
                   </div>
-                  {item.discount ? (
-                    <button className="rounded-[8px] bg-pale-light text-18 font-medium py-[10px] mb-6">
-                      В рассрочку
-                    </button>
-                  ) : null}
-                  {item.benefit ? (
-                    <p className="text-purple font-medium text-18 text-center mb-[16px]">{`выгода ${item.benefit}₽`}</p>
-                  ) : null}
+                  <button className="bg-purple rounded-10 text-white text-18 font-semibold py-[10px] mb-4 w-full">
+                    {`Оплатить`} <br /> {`${item.seesionCount * item.cost}₽`}
+                  </button>
                 </div>
+                {item.discount ? (
+                  <button className="rounded-[8px] bg-pale-light text-18 font-medium py-[10px] mb-6">
+                    В рассрочку
+                  </button>
+                ) : null}
+                {item.benefit ? (
+                  <p className="text-purple font-medium text-18 text-center mb-[16px]">{`выгода ${item.benefit}₽`}</p>
+                ) : null}
               </div>
             </div>
-          ))}
-        </div>
-        <div className="mt-16 text-center">
-          <input
-            type="text"
-            className="border-2 rounded-15 px-[30px] border-purple w-[380px] min-h-[70px] max-h-[70px] outline-none"
-            placeholder="Введите промокод"
-          />
-          <div className="flex justify-center mt-8">
-            <Button>Отправить</Button>
           </div>
+        ))}
+      </div>
+      <div className="mt-16 text-center">
+        <input
+          type="text"
+          className="border-2 rounded-15 px-[30px] border-purple w-[380px] min-h-[70px] max-h-[70px] outline-none"
+          placeholder="Введите промокод"
+        />
+        <div className="flex justify-center mt-8">
+          <Button>Отправить</Button>
         </div>
-      </Container>
-    </div>
+      </div>
+    </Container>
   );
 };
 

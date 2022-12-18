@@ -6,5 +6,15 @@ import FourSteps from "./FourSteps/FourSteps";
 import Questionaire from "./Questionare/Questionare";
 import HugPhone from "./HugPhone/HugPhone";
 import ExactPath from "./ExactPath/ExactPath";
+import AppStore from "./AppStore/AppStore";
 
-export { Navbar, Footer, FourSteps, Questionaire, HugPhone, ExactPath, Button };
+export {
+  Navbar,
+  Footer,
+  FourSteps,
+  Questionaire,
+  HugPhone,
+  ExactPath,
+  Button,
+  AppStore,
+};
