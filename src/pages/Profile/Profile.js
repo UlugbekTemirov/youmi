@@ -5,36 +5,54 @@ import Container from "../../layout/Container";
 
 import ProfileInfo from "./components/ProfileInfo";
 import { Link } from "react-router-dom";
+import NoMeeting from "./components/NoMeeting";
+import PopupBackdrop from "../../components/Backdrop/PopupBackdrop";
+import SelectTime from "./components/SelectTime";
 
 const Profile = () => {
   const [value, onChange] = useState(new Date());
+  const [meeting, setMeeting] = useState(null);
+  const [whichHour, setWhichHour] = useState(null);
+  const [open, setOpen] = useState(false);
   console.log(value);
+  console.log(whichHour);
 
   return (
     <div className="pt-[200px] pb-[100px]">
       <Container>
         <div className="grid grid-cols-2">
           <div className="col-span-1">
-            <ProfileInfo />
+            <ProfileInfo
+              setOpen={setOpen}
+              meeting={meeting}
+              setMeeting={setMeeting}
+            />
           </div>
           <div className="col-span-1 flex justify-end items-center">
-            <div className="max-w-[510px] h-full bg-aqua-light rounded-20 flex items-center">
-              <div>
-                <h1 className="text-24 font-semibold ml-[110px]">
-                  До сессии 2 дня
-                </h1>
-                <Calendar onChange={onChange} value={value} />
-                <Link
-                  className="underline ml-[110px] mt-[10px] block"
-                  to="/appointment"
-                >
-                  Ссылка на встречу
-                </Link>
+            {meeting ? (
+              <div className="max-w-[510px] h-full bg-aqua-light rounded-20 flex items-center">
+                <div className="mx-[110px]">
+                  <h1 className="text-24 font-semibold">До сессии 2 дня</h1>
+                  <Calendar />
+                  <Link className="underline mt-[10px] block" to="/appointment">
+                    Ссылка на встречу
+                  </Link>
+                </div>
               </div>
-            </div>
+            ) : (
+              <NoMeeting />
+            )}
           </div>
         </div>
       </Container>
+      <SelectTime
+        setWhichHour={setWhichHour}
+        whichHour={whichHour}
+        setOpen={setOpen}
+        open={open}
+        onChange={onChange}
+        value={value}
+      />
     </div>
   );
 };

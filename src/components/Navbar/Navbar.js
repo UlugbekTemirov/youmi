@@ -20,7 +20,6 @@ import { setShowPage } from "./navbar_slice";
 
 const Navbar = () => {
   const [loggedIn, setLoggedIn] = useState(localStorage.getItem("logged_in"));
-  console.log(loggedIn);
 
   useEffect(() => {
     setLoggedIn(localStorage.getItem("logged_in"));
@@ -56,7 +55,6 @@ const Navbar = () => {
     );
   }
 
-  console.log(loggedIn);
   return (
     <div
       className={`py-[30px] box-border fixed top-0 left-1/2 -translate-x-1/2 w-full z-50 ${

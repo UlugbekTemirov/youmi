@@ -111,6 +111,15 @@ html {
   -webkit-mask-image: url(./assets/icons/plus.svg);
 }
 
+.icon-plus-norm {
+  width: 30px;
+  height: 30px;
+  background: url(./assets/icons/plus.svg);
+  background-size: cover;
+  mask-image: url(./assets/icons/plus.svg);
+  -webkit-mask-image: url(./assets/icons/plus.svg);
+}
+
 .icon-plus-mini {
   width: 26px;
   height: 26px;
@@ -365,8 +374,9 @@ input[type="number"] {
 /* REACT CALENDAR */
 
 .react-calendar {
-  width: 510px;
-  padding: 0 110px;
+  width: 300px !important;
+  /* margin: 0 auto; */
+  /* padding: 0 110px; */
   background-color: #f9fcff;
   border-radius: 20px;
   font-size: 16px !important;

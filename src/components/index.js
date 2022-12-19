@@ -6,6 +6,7 @@ import Questions from "./Questions/Questions";
 import HugPhone from "./HugPhone/HugPhone";
 import ExactPath from "./ExactPath/ExactPath";
 import UserProfile from "./UserProfile/UserProfile";
+import Popup from "./Popup/Popup";
 
 export {
   Navbar,
@@ -16,4 +17,5 @@ export {
   ExactPath,
   CustomRange,
   UserProfile,
+  Popup,
 };

@@ -2,7 +2,7 @@ import ProfileButton from "./ProfileButton";
 
 import psyimg from "../../../assets/images/psyimg.svg";
 
-const ProfileInfo = () => {
+const ProfileInfo = ({ meeting, setMeeting, setOpen }) => {
   return (
     <div className="py-[50px] px-[90px] bg-aqua-light rounded-20 h-full">
       <div>
@@ -23,11 +23,19 @@ const ProfileInfo = () => {
         <div>
           <div className="flex items-center my-5">
             <span className="icon icon-calendar-mini"></span>
-            <h1 className="ml-5 text-18">14 августа</h1>
+            <h1 className="ml-5 text-18">{meeting ?? "Не назначена"}</h1>
           </div>
           <div>
-            <ProfileButton variant="contained">Перенести</ProfileButton>
-            <ProfileButton>Отменить</ProfileButton>
+            {!meeting ? (
+              <ProfileButton onClick={() => setOpen(true)} variant="contained">
+                Выбрать время
+              </ProfileButton>
+            ) : (
+              <>
+                <ProfileButton variant="contained">Перенести</ProfileButton>
+                <ProfileButton>Отменить</ProfileButton>
+              </>
+            )}
           </div>
         </div>
       </div>
