@@ -2,12 +2,14 @@ import Container from "../layout/Container";
 
 import blobs from "../assets/images/blobs.svg";
 
-const Section = ({ children, img, blob, widths }) => {
+const Section = ({ children, img, blob, widths, whiteBg }) => {
   return (
-    <div className="w-full bg-aqua-light pb-[80px]">
+    <div
+      className={`w-full ${whiteBg ? "bg-white" : "bg-aqua-light"}  pb-[80px]`}
+    >
       <Container>
         <div
-          className={`pt-[200px] grid ${widths?.grid ?? "grid-cols-2"} w-full`}
+          className={`pt-[180px] grid ${widths?.grid ?? "grid-cols-2"} w-full`}
         >
           <div
             className={`${

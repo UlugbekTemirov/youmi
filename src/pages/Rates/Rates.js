@@ -3,7 +3,7 @@ import computer_woman from "../../assets/images/illustrat 1.svg";
 import { AppStore, Button } from "../../components";
 import Tarif from "./components/Tarifs";
 import Container from "../../layout/Container";
-import Friends from "./components/Friends";
+import { PersonContent } from "../../components";
 import program_circle from "../../assets/images/program_circle.svg";
 import first from "../../assets/images/1.svg";
 import second from "../../assets/images/2.svg";
@@ -65,7 +65,22 @@ const Rates = () => {
       </div>
       <div className="pt-[120px]">
         <Container>
-          <Friends />
+          <PersonContent>
+            <div>
+              <p className="text-24 font-semibold mb-3">
+                Реферальная программа
+              </p>
+              <h1 className="text-purple text-40 font-extrabold mb-5">
+                Позаботьтесь о других
+              </h1>
+              <p className="leading-loose">
+                С помощью реферальной программы вы можете приглашать своих
+                друзей по вашей индивидуальной ссылке и получать 500 рублей
+                за каждого, кто пройдет первую сессию. Деньги поступают на ваш
+                баланс, с которого вы можете оплачивать сесии.
+              </p>
+            </div>
+          </PersonContent>
         </Container>
       </div>
       <div className="py-[120px]">

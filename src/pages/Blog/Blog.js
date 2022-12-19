@@ -3,6 +3,8 @@ import Categories from "./components/Categories/Categories";
 import Filters from "./components/Filters/Filters";
 import Container from "../../layout/Container";
 import search_icon from "../../assets/icons/search.svg";
+import { Button } from "../../components";
+import hugphone from "../../assets/images/hugphone.svg";
 
 const Blog = () => {
   return (

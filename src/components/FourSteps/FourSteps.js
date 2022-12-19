@@ -65,7 +65,7 @@ const FourSteps = ({ arrowtype, header, content }) => {
           )}
         </div>
       </div>
-      <div className={`grid ${style1} mt-[150px]`}>
+      <div className={`grid ${style1} mt-[180px]`}>
         <div
           className={`col-span-1 flex ${
             arrowtype ? "justify-start relative" : "justify-start"
@@ -106,7 +106,7 @@ const FourSteps = ({ arrowtype, header, content }) => {
           </div>
         </div>
       </div>
-      <div className={`grid ${style1} mt-[150px]`}>
+      <div className={`grid ${style1} mt-[180px]`}>
         <div className={`${style2} flex items-center relative z-20`}>
           <div>
             <img src={thirdLetter} alt="1" />
@@ -147,7 +147,7 @@ const FourSteps = ({ arrowtype, header, content }) => {
           )}
         </div>
       </div>
-      <div className={`grid ${style1} mt-[150px]`}>
+      <div className={`grid ${style1} mt-[180px]`}>
         <div className={`col-span-1 flex justify-start`}>
           {!arrowtype && <img src={test} alt="profiles" />}
         </div>

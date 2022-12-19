@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom";
 import Container from "../../../layout/Container";
 import woman from "../../../assets/images/woman.svg";
 import { HugPhone } from "../../../components";
+import { Button } from "../../../components";
+import hugphone from "../../../assets/images/hugphone.svg";
 
 const data = {
   tags: ["#отношения"],
