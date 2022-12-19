@@ -11,6 +11,9 @@ import {
   SuccessScreen,
   PaymentScreen,
   Questionare,
+  SubmitedScreen,
+  Entry,
+  Profile,
 } from "../pages";
 
 // components
@@ -31,6 +34,10 @@ const Router = () => {
 
         <Route path="/success_screen" element={<SuccessScreen />} />
         <Route path="/payment_screen" element={<PaymentScreen />} />
+        <Route path="/submited_screen" element={<SubmitedScreen />} />
+
+        <Route path="/entry" element={<Entry />} />
+        <Route path="/profile" element={<Profile />} />
 
         <Route path="/questionare/:step" element={<Questionare />} />
 

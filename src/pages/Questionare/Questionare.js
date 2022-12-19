@@ -22,8 +22,6 @@ const Questionare = () => {
 
   const [allData, setAllData] = useState([]);
 
-  console.log(allData);
-
   steps.forEach((item) => {
     item.name === step && item.allowed && (allow = true);
   });
@@ -32,7 +30,7 @@ const Questionare = () => {
 
   const nextStepHandler = (step) => {
     if (cur_step[0].order === steps.length) {
-      navigate("/");
+      navigate("/submited_screen");
       return;
     }
 
@@ -42,6 +40,7 @@ const Questionare = () => {
     newSteps[a + 1].allowed = true;
     newSteps[a].isCompleted = true;
     setSteps(newSteps);
+
     navigate(`/questionare/${newSteps[a + 1].name}`);
   };
 
@@ -54,7 +53,6 @@ const Questionare = () => {
     });
 
     const formData = new FormData(e.target);
-    console.log(Object.fromEntries(formData.entries()));
     setAllData((prev) => [...prev, formData]);
     nextStepHandler(step);
   };

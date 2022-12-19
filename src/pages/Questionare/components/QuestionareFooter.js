@@ -28,7 +28,7 @@ const QuestionareFooter = ({ steps, allow, cur_step }) => {
           py="py-[20px]"
           width="w-[220px]"
         >
-          {cur_step[0].order === steps.length ? "Назад" : "Далее"}
+          {cur_step[0].order === steps.length ? "Сохранить" : "Далее"}
         </Button>
       </div>
       <StepDots steps={steps} />

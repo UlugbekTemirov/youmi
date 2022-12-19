@@ -14,13 +14,11 @@ const QuestionsItems = ({ question }) => {
         </h1>
         <span className={`icon icon-${open ? "minus" : "plus"}`}></span>
       </div>
-      <p
-        className={`text-18 max-w-[780px] mt-[15px]  ${
-          open ? "block" : "hidden"
-        }`}
+      <div
+        className={`overflow-hidden duration-200 ${open ? "h-[150px]" : "h-0"}`}
       >
-        {question.content}
-      </p>
+        <p className={`text-18 max-w-[780px] mt-[15px]`}>{question.content}</p>
+      </div>
     </div>
   );
 };
