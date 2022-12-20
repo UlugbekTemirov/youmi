@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setActiveFilter, fetchData } from "./components/web_filter_slice";
 import { useEffect } from "react";
 import search_icon from "../../assets/icons/search.svg";
+import { Link } from "react-router-dom";
 
 const Webinars = () => {
   const dispatch = useDispatch();
@@ -42,14 +43,18 @@ const Webinars = () => {
               <img src={search_icon} alt="" />
             </div>
           </div>
-          <div className="my-[70px] flex justify-evenly">
+          <div className="mt-[50px] mb-[120px] grid grid-cols-3">
             {showedData.map((item, index) => (
-              <div key={index} className="flex flex-col w-[28%]">
+              <div key={index} className="flex flex-col w-[340px]">
                 <div className="flex p-[25px] bg-aqua rounded-20 mb-[20px]">
                   <img src={item.pic} className="w-full" alt="" />
                 </div>
                 <h1 className="text-24 font-semibold mb-2 cursor-pointer hover:underline hover:text-purple duration-100">
-                  {item.title}
+                  <Link
+                    to={`/webinar/category/${activeFilter}/${item.title.eng}`}
+                  >
+                    {item.title.rus}
+                  </Link>
                 </h1>
                 <p className="max-w-[300px]">{item.descr}</p>
               </div>

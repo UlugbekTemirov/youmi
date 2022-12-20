@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
 const ExactPath = ({ name, question }) => {
   const { showSearch } = useSelector((state) => state.exactpath);
   const dispatch = useDispatch();
-  console.log(question);
 
   const paths = [
     {
@@ -27,6 +26,14 @@ const ExactPath = ({ name, question }) => {
       eng: "depressive-state",
       rus: "Депрессивное состояние",
     },
+    {
+      eng: "archive",
+      rus: "Архив",
+    },
+    {
+      eng: "upcoming",
+      rus: "Предстоящие",
+    },
   ];
 
   const questions = [
@@ -44,23 +51,14 @@ const ExactPath = ({ name, question }) => {
       <Container>
         <div className="flex justify-between items-center">
           <div className="text-24 font-semibold">
-            <span>
-              <Link to="/blog">Категории</Link>
-            </span>
+            <span>Категории</span>
             <img className="inline-block mx-8" src={right_arrow} alt="" />
-            <span>
-              <Link to={`/blog/category/${name}`}>
-                {" "}
-                {addedPath.length ? addedPath[0].rus : "Not found"}
-              </Link>{" "}
-            </span>
+            <span>{addedPath.length ? addedPath[0].rus : "Not found"}</span>
             {question ? (
               <>
                 <img className="inline-block mx-8" src={right_arrow} alt="" />
                 <span>
-                  <Link to={`/blog/category/${name}?question=${question}`}>
-                    {addedQuestion.length ? addedQuestion[0].rus : "Not found"}
-                  </Link>
+                  {addedQuestion.length ? addedQuestion[0].rus : "Not found"}
                 </span>
               </>
             ) : null}

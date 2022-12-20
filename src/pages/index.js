@@ -5,6 +5,7 @@ import CategoryItemAnswers from "./CategoryItem/components/CategoryItemAnswers";
 import About from "./About/About";
 import Rates from "./Rates/Rates";
 import Webinars from "./Webinars/Webinars";
+import WebinarTheme from "./Webinars/WebinarTheme";
 
 export {
   Home,
@@ -14,4 +15,5 @@ export {
   About,
   Rates,
   Webinars,
+  WebinarTheme,
 };

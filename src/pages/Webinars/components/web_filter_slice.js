@@ -5,35 +5,51 @@ const initialState = {
   data: [
     {
       pic: apathy,
-      title: "Как побороть тревогу?",
+      title: {
+        rus: "Как побороть тревогу?",
+        eng: "how-to-overcome-anxiety?",
+      },
+
       descr:
         "В работе с психологом очень важно чувствовать себя в безопасности.",
       status: "archive",
     },
     {
       pic: apathy,
-      title: "Как побороть тревогу?",
+      title: {
+        rus: "Как побороть тревогу?",
+        eng: "how-to-overcome-anxiety?",
+      },
       descr:
         "В работе с психологом очень важно чувствовать себя в безопасности.",
       status: "archive",
     },
     {
       pic: apathy,
-      title: "Как побороть тревогу?",
+      title: {
+        rus: "Как побороть тревогу?",
+        eng: "how-to-overcome-anxiety?",
+      },
       descr:
         "В работе с психологом очень важно чувствовать себя в безопасности.",
       status: "archive",
     },
     {
       pic: apathy,
-      title: "Как побороть тревогу?",
+      title: {
+        rus: "Как побороть тревогу?",
+        eng: "how-to-overcome-anxiety?",
+      },
       descr:
         "В работе с психологом очень важно чувствовать себя в безопасности.",
       status: "upcoming",
     },
     {
       pic: apathy,
-      title: "Как побороть тревогу?",
+      title: {
+        rus: "Как побороть тревогу?",
+        eng: "how-to-overcome-anxiety?",
+      },
       descr:
         "В работе с психологом очень важно чувствовать себя в безопасности.",
       status: "upcoming",
