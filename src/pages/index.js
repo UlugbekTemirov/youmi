@@ -15,6 +15,8 @@ import Rates from "./Rates/Rates";
 import Webinars from "./Webinars/Webinars";
 import WebinarTheme from "./Webinars/WebinarTheme";
 import Tariff from "./Tariff/Tariff";
+import Messages from "./Messages/Messages";
+import Psychologists from "./Psychologists/Psychologists";
 
 export {
   Home,
@@ -34,4 +36,6 @@ export {
   Webinars,
   WebinarTheme,
   Tariff,
+  Messages,
+  Psychologists,
 };

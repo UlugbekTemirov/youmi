@@ -11,7 +11,9 @@ const UserProfile = () => {
       <div className="relative">
         <div className="flex items-center">
           <div>
-            <span className="icon icon-messages mr-[22px] cursor-pointer"></span>
+            <Link to="/messages">
+              <span className="icon icon-messages mr-[22px] cursor-pointer"></span>
+            </Link>
           </div>
           <div
             onClick={() => setOpen((prev) => !prev)}

@@ -64,17 +64,17 @@ const HistoryTariff = () => {
             </div>
             <div className="max-h-[350px] overflow-auto tariffSection">
               {history.map((item, index) => (
-                <div className="grid grid-cols-4 mt-[45px] items-center">
-                  <div className="text-18 font-normal col-span-1" key={index}>
+                <div
+                  key={index}
+                  className="grid grid-cols-4 mt-[45px] items-center"
+                >
+                  <div className="text-18 font-normal col-span-1">
                     {item.date}
                   </div>
-                  <div className="text-18 font-normal col-span-2" key={index}>
+                  <div className="text-18 font-normal col-span-2">
                     {item.description}
                   </div>
-                  <div
-                    key={index}
-                    className="w-[160px] text-center rounded-[30px] py-[7px] bg-purple text-18 font-semibold text-white  col-span-1"
-                  >
+                  <div className="w-[160px] text-center rounded-[30px] py-[7px] bg-purple text-18 font-semibold text-white  col-span-1">
                     {item.price}
                   </div>
                 </div>

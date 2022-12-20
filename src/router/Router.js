@@ -5,7 +5,6 @@ import { useState } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 // pages
-
 import {
   Blog,
   CategoryItem,
@@ -24,12 +23,13 @@ import {
   CategoryItemAnswers,
   WebinarTheme,
   Tariff,
+  Messages,
+  Psychologists,
 } from "../pages";
 
 // components
 import { Footer, Navbar } from "../components";
 import { ButtonSupport } from "../components/Button/Button";
-import Psychologists from "../pages/Psychologists/Psychologists";
 
 const Router = () => {
   return (
@@ -64,6 +64,8 @@ const Router = () => {
           path="/webinar/category/:status/:question"
           element={<WebinarTheme />}
         />
+
+        <Route path="/messages" element={<Messages />} />
 
         <Route path="/select-tarif" element={<Tariff />} />
         <Route path="*" element={<Navigate to="/" replace />} />
