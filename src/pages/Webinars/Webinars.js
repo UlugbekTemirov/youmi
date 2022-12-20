@@ -4,6 +4,7 @@ import { setActiveFilter, fetchData } from "./components/web_filter_slice";
 import { useEffect } from "react";
 import search_icon from "../../assets/icons/search.svg";
 import { Link } from "react-router-dom";
+import { Button } from "../../components";
 
 const Webinars = () => {
   const dispatch = useDispatch();
@@ -49,6 +50,14 @@ const Webinars = () => {
                 <div className="flex p-[25px] bg-aqua rounded-20 mb-[20px]">
                   <img src={item.pic} className="w-full" alt="" />
                 </div>
+                {item.status === "upcoming" ? (
+                  <div className="mt-[10px] mb-[10px] flex justify-between items-center">
+                    <div className="text-18">{item.lessonType}</div>
+                    <div className="px-6 py-2 bg-aqua rounded-20 text-18 font-semibold">
+                      {item.cost}
+                    </div>
+                  </div>
+                ) : null}
                 <h1 className="text-24 font-semibold mb-2 cursor-pointer hover:underline hover:text-purple duration-100">
                   <Link
                     to={`/webinar/category/${activeFilter}/${item.title.eng}`}
@@ -57,6 +66,14 @@ const Webinars = () => {
                   </Link>
                 </h1>
                 <p className="max-w-[300px]">{item.descr}</p>
+                {item.status === "upcoming" ? (
+                  <>
+                    <p className="mt-[20px] text-purple font-bold mb-[20px]">
+                      {item.date}
+                    </p>
+                    <Button width={"w-[284px]"}>Записаться</Button>
+                  </>
+                ) : null}
               </div>
             ))}
           </div>
