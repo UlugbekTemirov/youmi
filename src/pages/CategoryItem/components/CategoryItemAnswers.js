@@ -1,7 +1,9 @@
 import { useParams } from "react-router-dom";
 import Container from "../../../layout/Container";
 import woman from "../../../assets/images/woman.svg";
-import { HugPhone } from "../../../components";
+import { ExactPath, HugeImg, HugPhone } from "../../../components";
+import { Button } from "../../../components";
+import hugphone from "../../../assets/images/hugphone.svg";
 
 const data = {
   tags: ["#отношения"],
@@ -13,9 +15,12 @@ const data = {
 };
 
 const CategoryItemAnswers = () => {
+  const { name, question } = useParams();
+
   return (
-    <div>
+    <div className="pt-[150px]">
       <Container>
+        <ExactPath name={name} question={question} />
         <div className="text-20 w-[800px] mx-auto">
           <div>
             <span>Тэги</span>
@@ -32,7 +37,10 @@ const CategoryItemAnswers = () => {
             {data.question}
           </h1>
           <p className="mt-[30px] text-18 leading-8">{data.content}</p>
-          <div className="h-[450px] border mt-[60px] rounded-[30px]"></div>
+          <div className="mt-[60px]">
+            <HugeImg />
+          </div>
+          {/* <div className="h-[450px] border mt-[60px] rounded-[30px]"></div> */}
           <div className="flex justify-between mt-10">
             <p className="text-purple font-semibold text-20">Поделиться</p>
             <p className="text-20">{data.date}</p>

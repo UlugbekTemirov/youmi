@@ -1,12 +1,14 @@
 // global components
 import { Questions } from "../../components";
+
 import Ambulance from "./components/Ambulance";
 import OnlinePsychology from "./components/OnlinePsychology";
 import Carousel from "./components/Carousel";
 import WeWorkWith from "./components/WeWorkWith";
 import MakeFourSteps from "./components/MakeFourSteps";
-import AppStore from "./components/AppStore";
 import FindYourPsyOnline from "./components/FindYourPsyOnline";
+import { AppStore } from "../../components";
+import Container from "../../layout/Container";
 
 const Home = () => {
   const questions = [
@@ -60,7 +62,34 @@ const Home = () => {
       <WeWorkWith />
       <MakeFourSteps />
       <Questions questions={questions} />
-      <AppStore />
+      <AppStore>
+        <h1 className="text-purple font-extrabold text-40">
+          Оплачивая пакет от 4 сессий
+        </h1>
+        <p className="font-semibold text-20 mt-[35px] max-w-[580px]">
+          мы дарим доступ к приложению с виртуальным психологом.
+        </p>
+        <div className="flex items-center mt-[45px]">
+          <span className="icon icon-correct"></span>
+          <h1 className="ml-[30px] max-w-[440px] pr-20 text-18">
+            Прорабатывайте себя с помощью упражнений и аудиопрактик
+          </h1>
+        </div>
+        <div className="flex items-center mt-[45px]">
+          <span className="icon icon-correct"></span>
+          <h1 className="ml-[30px] max-w-[440px] text-18">
+            Ведите личный дневник настроения и получайте подробную статистику
+            о себе
+          </h1>
+        </div>
+        <div className="flex items-center mt-[45px]">
+          <span className="icon icon-correct"></span>
+          <h1 className="ml-[30px] max-w-[440px] text-18">
+            Расскажите виртуальному психологу о своих чувствах и он подберет
+            актуальный материал
+          </h1>
+        </div>
+      </AppStore>
       <Ambulance />
     </>
   );

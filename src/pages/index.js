@@ -11,6 +11,9 @@ import SubmitedScreen from "./Screens/SubmitedScreen";
 import Entry from "./Entry/Entry";
 import Profile from "./Profile/Profile";
 import SessionScreen from "./Screens/SessionScreen";
+import Rates from "./Rates/Rates";
+import Webinars from "./Webinars/Webinars";
+import WebinarTheme from "./Webinars/WebinarTheme";
 
 export {
   Home,
@@ -26,4 +29,7 @@ export {
   Entry,
   Profile,
   SessionScreen,
+  Rates,
+  Webinars,
+  WebinarTheme,
 };

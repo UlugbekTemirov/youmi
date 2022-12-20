@@ -47,10 +47,7 @@ const CategoryItemList = ({ name }) => {
       <Container>
         <div className="grid grid-cols-3 gap-10">
           {categoryItemList.map((item, index) => (
-            <Link
-              key={index}
-              to={`/blog/category/${name}?question=${item.eng}`}
-            >
+            <Link key={index} to={`/blog/category/${name}/${item.eng}`}>
               <div className="flex flex-col">
                 <div className="h-[170px] border rounded-15"></div>
                 <h1 className="text-20 font-semibold mb-4 mt-2">

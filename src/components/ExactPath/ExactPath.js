@@ -3,11 +3,11 @@ import right_arrow from "../../assets/icons/right-arrow.svg";
 import search_icon from "../../assets/icons/search.svg";
 import { useSelector, useDispatch } from "react-redux";
 import { setShowSearch } from "./exactpath_slice";
+import { Link } from "react-router-dom";
 
 const ExactPath = ({ name, question }) => {
   const { showSearch } = useSelector((state) => state.exactpath);
   const dispatch = useDispatch();
-  console.log(question);
 
   const paths = [
     {
@@ -25,6 +25,14 @@ const ExactPath = ({ name, question }) => {
     {
       eng: "depressive-state",
       rus: "Депрессивное состояние",
+    },
+    {
+      eng: "archive",
+      rus: "Архив",
+    },
+    {
+      eng: "upcoming",
+      rus: "Предстоящие",
     },
   ];
 

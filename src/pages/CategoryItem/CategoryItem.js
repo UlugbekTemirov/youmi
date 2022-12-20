@@ -5,14 +5,13 @@ import { useQuery } from "../../hooks/useQuery";
 import CategoryItemAnswers from "./components/CategoryItemAnswers";
 
 const CategoryItem = () => {
-  const { name } = useParams();
-  let query = useQuery();
-  const question = query.get("question");
+  const { name, question } = useParams();
+  console.log(name);
   return (
     <div>
       <div className="pt-[150px]">
-        <ExactPath name={name} question={question ? question : null} />
-        {question ? <CategoryItemAnswers /> : <CategoryItemList name={name} />}
+        <ExactPath name={name} />
+        <CategoryItemList name={name} />
       </div>
     </div>
   );
