@@ -15,6 +15,7 @@ module.exports = {
         "pink-light": "#FAAAB4",
         orange: "#FACD6E",
         charcoal: "#4D4D52",
+        popup: "rgba(74, 70, 117, 0.6)",
       },
       fontSize: {
         44: "44px",

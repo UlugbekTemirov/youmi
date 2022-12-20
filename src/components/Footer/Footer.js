@@ -3,9 +3,14 @@ import brand_logo from "../../assets/images/youmilogo.svg";
 import vk from "../../assets/icons/vk.svg";
 import telegram from "../../assets/icons/telegram.svg";
 import dzen from "../../assets/icons/dzen.svg";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const location = useLocation();
+  const path = location.pathname;
+
+  if (path.includes("submited_screen") || path.includes("entry")) return null;
+
   return (
     <div className="bg-aqua-light py-[80px]">
       <Container>
