@@ -28,7 +28,7 @@ const Button = ({
       </button>
       <div
         className={`absolute duration-200 ${top ?? "top-[15px]"} ${
-          left ?? "left-[15px]"
+          left ?? "left-[10px]"
         } w-full h-full rounded-15 bg-aqua-dark main-button-shadow`}
       ></div>
     </div>

@@ -32,6 +32,7 @@ const Navbar = () => {
 
   // when page scrolled this function gets top value of page
   const [top, setTop] = useState(0);
+
   useEffect(() => {
     const handleScroll = (event) => {
       setTop(window.scrollY);
@@ -45,7 +46,11 @@ const Navbar = () => {
 
   let path = location.pathname;
 
-  if (path.includes("questionare") || path.includes("submited_screen")) {
+  if (
+    path.includes("questionare") ||
+    path.includes("submited_screen") ||
+    path.includes("session_screen")
+  ) {
     return (
       <div
         className={`pt-[50px] box-border w-full z-50 flex justify-center bg-transparent`}

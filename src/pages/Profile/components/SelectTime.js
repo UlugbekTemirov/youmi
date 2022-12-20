@@ -11,6 +11,8 @@ const SelectTime = ({
   whichHour,
   onChange,
   value,
+  setMeeting,
+  time,
 }) => {
   const hours = ["12:00", "13:00", "15:00", "16:00", "17:00", "18:00", "20:00"];
 
@@ -25,6 +27,7 @@ const SelectTime = ({
     setOpen(false);
     onChange(day);
     setWhichHour(xhour);
+    setMeeting(true);
   };
 
   return (

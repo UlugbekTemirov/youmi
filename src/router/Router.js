@@ -1,7 +1,10 @@
+// react
+import { useState } from "react";
+
+// react-router-dom
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 // pages
-
 import {
   Blog,
   CategoryItem,
@@ -14,6 +17,7 @@ import {
   SubmitedScreen,
   Entry,
   Profile,
+  SessionScreen,
 } from "../pages";
 
 // components
@@ -35,6 +39,7 @@ const Router = () => {
         <Route path="/success_screen" element={<SuccessScreen />} />
         <Route path="/payment_screen" element={<PaymentScreen />} />
         <Route path="/submited_screen" element={<SubmitedScreen />} />
+        <Route path="/session_screen" element={<SessionScreen />} />
 
         <Route path="/entry" element={<Entry />} />
         <Route path="/profile" element={<Profile />} />

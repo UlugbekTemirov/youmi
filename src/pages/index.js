@@ -10,6 +10,7 @@ import Questionare from "./Questionare/Questionare";
 import SubmitedScreen from "./Screens/SubmitedScreen";
 import Entry from "./Entry/Entry";
 import Profile from "./Profile/Profile";
+import SessionScreen from "./Screens/SessionScreen";
 
 export {
   Home,
@@ -24,4 +25,5 @@ export {
   SubmitedScreen,
   Entry,
   Profile,
+  SessionScreen,
 };
