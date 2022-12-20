@@ -273,6 +273,23 @@ html {
   -webkit-mask-image: url(./assets/icons/cross.svg);
 }
 
+.icon-qiwi {
+  width: 80px;
+  height: 30px;
+  background: url(./assets/icons/qiwi.svg);
+  background-size: cover;
+  mask-image: url(./assets/icons/qiwi.svg);
+  -webkit-mask-image: url(./assets/icons/qiwi.svg);
+}
+.icon-webmoney {
+  width: 110px;
+  height: 30px;
+  background: url(./assets/icons/webmoney.svg);
+  background-size: cover;
+  mask-image: url(./assets/icons/webmoney.svg);
+  -webkit-mask-image: url(./assets/icons/webmoney.svg);
+}
+
 .owl-item {
   width: initial !important;
 }
@@ -541,4 +558,9 @@ input[type="number"] {
 }
 .react-calendar--selectRange .react-calendar__tile--hover {
   background-color: #e6e6e6;
+}
+
+.tariffSection {
+  scrollbar-color: #7872b9 #e0e0e0;
+  scrollbar-width: 5px;
 }

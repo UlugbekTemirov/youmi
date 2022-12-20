@@ -23,6 +23,7 @@ import {
   Webinars,
   CategoryItemAnswers,
   WebinarTheme,
+  Tariff,
 } from "../pages";
 
 // components
@@ -63,6 +64,8 @@ const Router = () => {
           path="/webinar/category/:status/:question"
           element={<WebinarTheme />}
         />
+
+        <Route path="/select-tarif" element={<Tariff />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <Footer />

@@ -14,6 +14,7 @@ import SessionScreen from "./Screens/SessionScreen";
 import Rates from "./Rates/Rates";
 import Webinars from "./Webinars/Webinars";
 import WebinarTheme from "./Webinars/WebinarTheme";
+import Tariff from "./Tariff/Tariff";
 
 export {
   Home,
@@ -32,4 +33,5 @@ export {
   Rates,
   Webinars,
   WebinarTheme,
+  Tariff,
 };

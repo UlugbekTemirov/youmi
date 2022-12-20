@@ -10,7 +10,7 @@ const AppStore = ({ buttonCentered, children }) => {
         <AppStoreContent>{children}</AppStoreContent>
       </AppStoreSection>
       <div
-        className={`mt-[120px] ${
+        className={`mt-[60px] ${
           buttonCentered ? "justify-center" : "justify-start"
         } flex `}
       >
