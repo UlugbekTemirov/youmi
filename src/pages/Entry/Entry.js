@@ -1,10 +1,21 @@
 import Container from "../../layout/Container";
 
 import woman_laptop from "../../assets/images/woman_with_laptop.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "../../components/Button/Button";
+import { useSelector, useDispatch } from "react-redux";
+import { setLoggedIn } from "../../components/Navbar/navbar_slice";
 
 const Entry = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const loginHandler = () => {
+    localStorage.setItem("logged_in", true);
+    dispatch(setLoggedIn(localStorage.getItem("logged_in")));
+    navigate("/profile");
+  };
+
   return (
     <div className="pt-[210px] bg-aqua-light h-screen">
       <Container>
@@ -31,7 +42,7 @@ const Entry = () => {
               Зарегистрироваться
             </Link>
             <div className="mt-[37px]">
-              <Button>Отправить код</Button>
+              <Button onClick={loginHandler}>Отправить код</Button>
             </div>
           </div>
           <div className="flex justify-end items-center">

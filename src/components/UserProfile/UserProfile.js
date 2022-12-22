@@ -1,9 +1,19 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, memo } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import UserProfileBackdrop from "../Backdrop/UserProfileBackdrop";
+import { useSelector, useDispatch } from "react-redux";
+import { setLoggedIn } from "../Navbar/navbar_slice";
 
 const UserProfile = () => {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const logoutHandler = () => {
+    localStorage.removeItem("logged_in");
+    dispatch(setLoggedIn("false"));
+    navigate("/");
+  };
 
   return (
     <>
@@ -12,7 +22,7 @@ const UserProfile = () => {
         <div className="flex items-center">
           <div>
             <Link to="/messages">
-              <span className="icon icon-messages mr-[22px] cursor-pointer"></span>
+              <span className="icon icon-messages mr-[22px] cursor-pointer hover:scale-[1.1] duration-100"></span>
             </Link>
           </div>
           <div
@@ -40,7 +50,7 @@ const UserProfile = () => {
         <div
           id="user_profile"
           className={`absolute z-20 top-20 right-0 bg-aqua w-1/2 duration-200 overflow-hidden rounded-15   shadow-navbar ${
-            open ? "h-[100px] border border-purple" : "h-0"
+            open ? "h-[140px] border" : "h-0"
           }`}
         >
           <div className="my-2 mx-4 flex items-center justify-center">
@@ -63,6 +73,11 @@ const UserProfile = () => {
                   Settings
                 </Link>
               </li>
+              <li className="mt-2 cursor-pointer w-full hover:bg-aqua-dark duration-100 rounded-15 py-1">
+                <button className="w-full block" onClick={logoutHandler}>
+                  Logout
+                </button>
+              </li>
             </ul>
           </div>
         </div>
@@ -71,4 +86,4 @@ const UserProfile = () => {
   );
 };
 
-export default UserProfile;
+export default memo(UserProfile);

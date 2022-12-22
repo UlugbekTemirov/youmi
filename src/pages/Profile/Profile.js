@@ -1,15 +1,17 @@
+// react
 import { useState } from "react";
-
-import { Calendar } from "react-calendar";
+// layout
 import Container from "../../layout/Container";
-
-import ProfileInfo from "./components/ProfileInfo";
+// react-router-dom
 import { Link } from "react-router-dom";
+// react-calendar
+import { Calendar } from "react-calendar";
+// components
+import ProfileInfo from "./components/ProfileInfo";
 import NoMeeting from "./components/NoMeeting";
 import SelectTime from "./components/SelectTime";
 
 const Profile = () => {
-  // states
   const [value, onChange] = useState(new Date());
   const [meeting, setMeeting] = useState(false);
   const [whichHour, setWhichHour] = useState(null);
