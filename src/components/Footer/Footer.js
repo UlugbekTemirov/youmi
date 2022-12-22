@@ -12,7 +12,11 @@ const Footer = () => {
   if (path.includes("submited_screen") || path.includes("entry")) return null;
 
   return (
-    <div className="bg-aqua-light py-[80px]">
+    <div
+      className={`${
+        path.includes("select-tarif") ? "bg-transparent" : "bg-aqua-light"
+      } py-[80px]`}
+    >
       <Container>
         <div className="grid grid-cols-5 box-border">
           <div className="flex flex-col justify-between">

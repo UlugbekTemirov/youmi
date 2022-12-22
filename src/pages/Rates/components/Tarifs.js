@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Button } from "../../../components";
 import Container from "../../../layout/Container";
 
@@ -52,12 +53,16 @@ const tarifs = [
   },
 ];
 
-const Tarif = () => {
+const Tarif = ({ autoPro }) => {
+  const [checked, setChecked] = useState(false);
+
   return (
     <Container>
-      <h1 className="text-center text-purple font-extrabold text-40 mb-[50px]">
-        Тарифы
-      </h1>
+      {autoPro ? null : (
+        <h1 className="text-center text-purple font-extrabold text-40 mb-[50px]">
+          Тарифы
+        </h1>
+      )}
       <div className="grid grid-cols-4 gap-6">
         {tarifs.map((item) => (
           <div>
@@ -90,6 +95,37 @@ const Tarif = () => {
           </div>
         ))}
       </div>
+      {autoPro && (
+        <div className="my-[60px] rounded-15 max-w-[880px] grid grid-cols-5 items-center bg-aqua-light">
+          <div className="col-span-4 py-[24px] px-[70px]">
+            <h1 className="text-20 font-semibold">Включить автопродление</h1>
+            <p className="text-16 font-normal mt-[10px]">
+              Автоматически продлевает пакет после последней сессии. Не
+              волнуйтесь, вы в любой момент сможете отменить подписку.
+            </p>
+          </div>
+          <div className="col-span-1 flex justify-center items-center">
+            <div>
+              <label
+                htmlFor="checkinput"
+                className="w-[80px] h-[40px] block bg-aqua-dark relative rounded-[40px] cursor-pointer duration-200"
+              >
+                <span
+                  className={`rounded-full w-[40px] h-[40px] bg-purple absolute duration-200 ${
+                    checked ? "left-1/2" : "left-0"
+                  } top-0`}
+                ></span>
+              </label>
+              <input
+                id="checkinput"
+                className="hidden"
+                onChange={(e) => setChecked(e.target.checked)}
+                type="checkbox"
+              />
+            </div>
+          </div>
+        </div>
+      )}
       <div className="mt-16 text-center">
         <input
           type="text"

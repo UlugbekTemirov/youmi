@@ -17,17 +17,17 @@ import UserProfile from "../UserProfile/UserProfile";
 
 //actions
 import { setShowPage } from "./navbar_slice";
+import { setLoggedIn } from "./navbar_slice";
 
 const Navbar = () => {
-  const [loggedIn, setLoggedIn] = useState(localStorage.getItem("logged_in"));
+  const { showPage, loggedIn } = useSelector((state) => state.navbar);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    setLoggedIn(localStorage.getItem("logged_in"));
-  }, []);
+    dispatch(setLoggedIn(localStorage.getItem("logged_in")));
+  }, [loggedIn]);
 
   const style = "text-charcoal font-semibold mr-[70px] cursor-pointer";
-  const { showPage } = useSelector((state) => state.navbar);
-  const dispatch = useDispatch();
   const location = useLocation();
 
   // when page scrolled this function gets top value of page

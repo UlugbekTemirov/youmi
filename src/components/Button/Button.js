@@ -9,6 +9,7 @@ const Button = ({
   left,
   py,
   type,
+  height,
 }) => {
   return (
     <div className={`${width ?? "w-[380px]"} relative`}>
@@ -21,7 +22,7 @@ const Button = ({
             : "bg-gray-300 text-gray-900 cursor-not-allowed"
         } text-20 btn text-white rounded-15 text-center ${
           py ?? "py-[25px]"
-        } font-bold leading-5 relative z-10 w-full main-button`}
+        }  font-bold leading-5 relative z-10 w-full main-button`}
         type={type ?? "button"}
       >
         {children}
