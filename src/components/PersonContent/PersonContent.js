@@ -1,4 +1,5 @@
 import friends_icon from "../../assets/images/friends.svg";
+import Container from "../../layout/Container";
 import { Button } from "../Button/Button";
 
 const PersonContent = ({ img, buttonTrue, children, width }) => {
@@ -7,7 +8,7 @@ const PersonContent = ({ img, buttonTrue, children, width }) => {
       <div
         className={`bg-aqua-light rounded-20 grid ${
           width?.grid ?? "grid-cols-2"
-        }  p-[80px]`}
+        }  py-[80px] `}
       >
         <div className={`${width?.content ?? "col-span-1"}`}>{children}</div>
         <div className="relative">

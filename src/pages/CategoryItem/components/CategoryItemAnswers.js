@@ -1,7 +1,12 @@
 import { useParams } from "react-router-dom";
 import Container from "../../../layout/Container";
 import woman from "../../../assets/images/woman.svg";
-import { ExactPath, HugeImg, HugPhone } from "../../../components";
+import {
+  ExactPath,
+  HugeImg,
+  HugPhone,
+  TripleCarousel,
+} from "../../../components";
 import { Button } from "../../../components";
 import hugphone from "../../../assets/images/hugphone.svg";
 
@@ -47,7 +52,7 @@ const CategoryItemAnswers = () => {
           </div>
         </div>
       </Container>
-      <div className="h-[729px] w-full bg-aqua-light mt-[120px]"></div>
+      <TripleCarousel />
       <HugPhone />
     </div>
   );

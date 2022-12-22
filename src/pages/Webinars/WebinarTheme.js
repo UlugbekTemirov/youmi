@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { ExactPath, HugeImg, HugPhone } from "../../components";
+import { ExactPath, HugeImg, HugPhone, TripleCarousel } from "../../components";
 import Container from "../../layout/Container";
 
 const data = {
@@ -42,7 +42,7 @@ const WebinarTheme = () => {
           Поделиться
         </p>
       </div>
-      <div className="carousel h-[729px] bg-aqua-light"></div>
+      <TripleCarousel />
       <HugPhone />
     </div>
   );
