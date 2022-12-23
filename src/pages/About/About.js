@@ -7,6 +7,10 @@ import AboutUs from "./components/AboutUs";
 import YouMi from "./components/YouMi";
 
 const About = () => {
+  window.scrollTo({
+    top: 0,
+  });
+
   return (
     <>
       <YouMi />

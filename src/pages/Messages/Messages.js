@@ -133,7 +133,6 @@ const Messages = () => {
   const { chat, message } = useSelector((state) => state.messages);
 
   const contact = contacts.filter((item) => item.id === chat);
-  console.log(contact);
 
   const [tempmes, setTempmes] = useState(null);
   const mainSection = useRef();
@@ -161,8 +160,6 @@ const Messages = () => {
       behavior: "smooth",
     });
   }, [message, contact]);
-
-  console.log(window);
 
   return (
     <div className="pt-[200px] pb-[100px]">

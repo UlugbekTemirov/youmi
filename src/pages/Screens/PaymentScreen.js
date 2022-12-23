@@ -11,8 +11,6 @@ const PaymentScreen = () => {
 
   const [check, setCheck] = useState(false);
 
-  console.log(check);
-
   return (
     <div className="pt-[180px] pb-[160px]">
       <Container>

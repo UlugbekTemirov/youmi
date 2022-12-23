@@ -1,5 +1,3 @@
-import adminava from "../../../assets/images/contact1.svg";
-
 const MainSection = ({ contact }) => {
   return (
     <div className="flex flex-col justify-end w-full pb-[70px] p-4">

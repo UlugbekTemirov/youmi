@@ -1,6 +1,10 @@
 import Container from "../../layout/Container";
 
 const Contacts = () => {
+  window.scrollTo({
+    top: 0,
+  });
+
   return (
     <div className="pt-[200px] pb-[120px]">
       <Container>

@@ -42,6 +42,10 @@ const benefits = [
 ];
 
 const Psychologists = () => {
+  window.scrollTo({
+    top: 0,
+  });
+
   return (
     <div>
       <Section img={other_woman_m} whiteBg>

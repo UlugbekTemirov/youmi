@@ -6,7 +6,6 @@ import CategoryItemAnswers from "./components/CategoryItemAnswers";
 
 const CategoryItem = () => {
   const { name, question } = useParams();
-  console.log(name);
   return (
     <div>
       <div className="pt-[150px]">

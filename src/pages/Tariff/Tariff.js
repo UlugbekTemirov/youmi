@@ -14,6 +14,10 @@ const navItems = [
 const Tariff = () => {
   const [index, getIndex] = useState(1);
 
+  window.scrollTo({
+    top: 0,
+  });
+
   return (
     <div className="pt-[150px]">
       <TariffNav navItems={navItems} getIndex={getIndex} index={index} />

@@ -7,6 +7,10 @@ import { Button } from "../../components";
 import hugphone from "../../assets/images/hugphone.svg";
 
 const Blog = () => {
+  window.scrollTo({
+    top: 0,
+  });
+
   return (
     <div className="pt-[150px]">
       <Container>
