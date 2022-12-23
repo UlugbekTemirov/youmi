@@ -1,4 +1,4 @@
-import { Footer, HugPhone } from "../../components";
+import { Footer, HugPhone, TripleCarousel } from "../../components";
 import Categories from "./components/Categories/Categories";
 import Filters from "./components/Filters/Filters";
 import Container from "../../layout/Container";
@@ -22,7 +22,8 @@ const Blog = () => {
         </div>
       </Container>
       <Categories />
-      <Filters />
+      {/* <Filters /> */}
+      <TripleCarousel />
       <HugPhone />
     </div>
   );

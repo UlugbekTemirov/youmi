@@ -12,6 +12,7 @@ import Popup from "./Popup/Popup";
 import AppStore from "./AppStore/AppStore";
 import PersonContent from "./PersonContent/PersonContent";
 import HugeImg from "./HugeImg/HugeImg";
+import TripleCarousel from "./TripleCarousel/TripleCarousel";
 
 export {
   Navbar,
@@ -28,4 +29,5 @@ export {
   PersonContent,
   ButtonProfile,
   HugeImg,
+  TripleCarousel,
 };
