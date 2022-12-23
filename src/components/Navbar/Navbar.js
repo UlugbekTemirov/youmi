@@ -27,7 +27,7 @@ const Navbar = () => {
     dispatch(setLoggedIn(localStorage.getItem("logged_in")));
   }, [loggedIn]);
 
-  const style = "text-charcoal font-semibold mr-[70px] cursor-pointer";
+  const style = "font-semibold mr-[70px] cursor-pointer";
   const location = useLocation();
 
   // when page scrolled this function gets top value of page
@@ -45,7 +45,6 @@ const Navbar = () => {
   }, []);
 
   let path = location.pathname;
-
   if (
     path.includes("questionare") ||
     path.includes("submited_screen") ||
@@ -75,13 +74,25 @@ const Navbar = () => {
             {loggedIn !== "true" ? (
               <div className="flex items-center">
                 <ul className="flex">
-                  <li className={style}>
+                  <li
+                    className={`${style} ${
+                      path.includes("about") && "text-purple"
+                    }`}
+                  >
                     <Link to="/about">О нас</Link>
                   </li>
-                  <li className={style}>
+                  <li
+                    className={`${style} ${
+                      path.includes("tarif") && "text-purple"
+                    }`}
+                  >
                     <Link to="/tarif">Тарифы</Link>
                   </li>
-                  <li className={style}>
+                  <li
+                    className={`${style} ${
+                      path.includes("psychologists") && "text-purple"
+                    }`}
+                  >
                     <Link to="/psychologists">Психологам</Link>
                   </li>
                   <li className={`${style} flex items-center relative`}>

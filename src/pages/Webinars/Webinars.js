@@ -17,6 +17,10 @@ const Webinars = () => {
     dispatch(fetchData(addedData));
   }, [activeFilter]);
 
+  window.scrollTo({
+    top: 0,
+  });
+
   return (
     <div className="pt-[150px]">
       <div>

@@ -9,7 +9,12 @@ import first from "../../assets/images/1.svg";
 import second from "../../assets/images/2.svg";
 import third from "../../assets/images/3.svg";
 import smooth_right from "../../assets/images/smooth_right.svg";
+
 const Rates = () => {
+  window.scrollTo({
+    top: 0,
+  });
+
   return (
     <div>
       <Section

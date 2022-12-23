@@ -21,6 +21,10 @@ const Profile = () => {
   const now = new Date().getDate();
   const day = date.getDate() - now;
 
+  window.scrollTo({
+    top: 0,
+  });
+
   return (
     <div className="pt-[200px] pb-[100px]">
       <Container>
