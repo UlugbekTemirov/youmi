@@ -49,8 +49,8 @@ const CategoryItemList = ({ name }) => {
           {categoryItemList.map((item, index) => (
             <Link key={index} to={`/blog/category/${name}/${item.eng}`}>
               <div className="flex flex-col">
-                <div className="h-[170px] border rounded-15"></div>
-                <h1 className="text-20 font-semibold mb-4 mt-2">
+                <img src={woman} className="rounded-15" alt="" />
+                <h1 className="text-20 font-semibold mb-4  mt-2">
                   {item.title}
                 </h1>
                 <p className="text-18 ">{item.descr}</p>

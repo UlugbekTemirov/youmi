@@ -110,6 +110,7 @@ const Psychologists = () => {
                 }  flex ${
                   (index + 1) % 2 === 1 ? "justify-start" : "justify-end"
                 }`}
+                key={index}
               >
                 <div className="relative w-3/5">
                   <div className="bg-white rounded-20 pt-[100px] px-[60px] pb-[50px]">

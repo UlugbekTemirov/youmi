@@ -4,7 +4,7 @@ const HugeImg = ({ video }) => {
   return (
     <div className="w-[780px] h-[450px] relative rounded-20 overflow-hidden">
       <div className="w-full h-full border rounded-20">
-        {/* <img src={woman} className="w-full h-full" alt="" /> */}
+        <img src={woman} className="w-full h-full" alt="" />
       </div>
       {video ? (
         <div className="w-full h-full absolute top-0 left-0 border bg-black opacity-50 rounded-20 flex justify-center items-center">

@@ -59,8 +59,8 @@ const Tarif = () => {
         Тарифы
       </h1>
       <div className="grid grid-cols-4 gap-6">
-        {tarifs.map((item) => (
-          <div>
+        {tarifs.map((item, index) => (
+          <div key={index}>
             <div className="flex flex-col rounded-15 bg-aqua-light overflow-hidden h-full">
               <div className="bg-aqua py-[16px]">
                 <p className="text-18 font-medium text-center">{`${item.seesionCount} сесии`}</p>
